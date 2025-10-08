@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
-    [SerializeField]GameObject Bala;
-    [SerializeField]GameObject canodaarma;
+    [SerializeField] GameObject Bala;
+    [SerializeField] GameObject canodaarma;
+    [SerializeField] AudioSource armasource;
+    [SerializeField] AudioClip[] atiraclip;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +35,7 @@ public class Arma : MonoBehaviour
 
     void Atira()
     {
+        armasource.PlayOneShot(atiraclip[Random.Range(0, atiraclip.Length)]);
         Vector3 PosMouse = Input.mousePosition;
 
         PosMouse = Camera.main.ScreenToWorldPoint(PosMouse);

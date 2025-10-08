@@ -10,11 +10,18 @@ public class Movimenta_Personagem : MonoBehaviour
     Rigidbody2D rb;
     Collider2D coll;
     SpriteRenderer sprite;
-
+    //audio sources
+    
     //varivaveis movimento base
     [Header("Movimentação Base")]
     [SerializeField] float velocidadejogador = 5f;
     Vector3 movimento = new Vector3();
+    [SerializeField] AudioSource playersource;
+    [SerializeField] AudioClip[] passosclip;
+    float timerpassos = 0f;
+    float tempopassos = 0.4f;
+
+    //estados do jogador
     enum EstadoJogador { idle, correndo, dash }
     EstadoJogador estadoAtual = EstadoJogador.idle;
 
@@ -23,6 +30,7 @@ public class Movimenta_Personagem : MonoBehaviour
     float velocidadeatual;
     float timer;
     float tempodash = 0.5f;
+    [SerializeField] AudioClip dashclip;
     //Inputs
     bool inputdash;
     float movehorizontalInput;
@@ -99,6 +107,7 @@ public class Movimenta_Personagem : MonoBehaviour
     void Correndo()
     {
         //comportamento do estado
+        TocaPassos();
         if (movimento.x != 0)
         {
             animator.Play("Andando_Lado");
@@ -131,6 +140,7 @@ public class Movimenta_Personagem : MonoBehaviour
 
     void Dash()
     {
+        playersource.clip = dashclip; playersource.Play();
         //comportamento do estado
         if (movimento.x != 0)
         {
@@ -147,7 +157,7 @@ public class Movimenta_Personagem : MonoBehaviour
                 animator.Play("Dash_Costas");
             }
         }
-
+        
         velocidadeatual = velocidadedash;
         timer += Time.fixedDeltaTime;
         
@@ -163,6 +173,22 @@ public class Movimenta_Personagem : MonoBehaviour
             {
                 estadoAtual = EstadoJogador.idle;
             }
+        }
+
+        
+
+    }
+    void TocaPassos()
+    {
+        if (timerpassos < tempopassos)
+        {
+            timerpassos += Time.deltaTime;
+
+        }
+        else
+        {
+            playersource.PlayOneShot(passosclip[Random.Range(0, passosclip.Length)]);
+            timerpassos = 0f;
         }
 
     }
