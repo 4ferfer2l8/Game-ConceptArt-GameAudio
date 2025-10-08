@@ -183,6 +183,9 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
+  zombiesource: {fileID: 3110041183772193606, guid: 9955c2b8a33d64e45838b335282058a5, type: 3}
+  somzumbi: {fileID: 8300000, guid: 5c06d8ab277329d47b5d51c0c5b50d4f, type: 3}
+  somataquezumbi: {fileID: 8300000, guid: 8190f56d874de8941b289c4d365c01f2, type: 3}
 --- !u!95 &7482953033131368489
 Animator:
   serializedVersion: 7

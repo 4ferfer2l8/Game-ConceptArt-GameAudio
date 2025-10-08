@@ -25,7 +25,7 @@ public class ZombieController : MonoBehaviour
 
     [SerializeField] AudioSource zombiesource;
     [SerializeField] AudioClip somzumbi;
-    [SerializeField] AudioClip[] somataquezumbi;
+    [SerializeField] AudioClip somataquezumbi;
     void Start()
     {
         player = GameObject.FindWithTag("Player")?.transform;
@@ -102,7 +102,7 @@ public class ZombieController : MonoBehaviour
             if (distance <= attackRange + 0.2f) // Pequena margem de erro
             {
                 playerController.TakeDamage(damage);
-                zombiesource.clip = somataquezumbi[Random.Range(0, somataquezumbi.Length)];
+                zombiesource.clip = somataquezumbi;
                 zombiesource.Play();
                 Debug.Log("Zumbi atacou o jogador! Dano: " + damage);
             }
