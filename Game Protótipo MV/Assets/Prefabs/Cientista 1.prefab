@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 8374424129638203601}
   m_Layer: 0
   m_Name: Cientista 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,9 +276,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movimenta_Personagem
   velocidadejogador: 5
   playersource: {fileID: 0}
-  passosclip: []
+  passosclip:
+  - {fileID: 8300000, guid: 45bcac394868cbb4eb030c0ca1f87ae6, type: 3}
+  - {fileID: 8300000, guid: 8cdc3376c5b60fb4faaebe12fa6faac8, type: 3}
+  - {fileID: 8300000, guid: 11d610f90818d074d8bfae0c7acbb1ca, type: 3}
+  - {fileID: 8300000, guid: 5df00ce7190c18d41a793bab38228be4, type: 3}
+  - {fileID: 8300000, guid: a6c5b45e42ee79443b4651a340c2c738, type: 3}
   velocidadedash: 8
-  dashclip: {fileID: 0}
+  dashclip: {fileID: 8300000, guid: c082b3800ecf69a45a81afde7f61ffc8, type: 3}
 --- !u!61 &2736461534723510555
 BoxCollider2D:
   m_ObjectHideFlags: 0

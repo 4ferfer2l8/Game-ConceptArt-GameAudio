@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().TakeDamage(damage);
+           // other.GetComponent<PlayerController>().TakeDamage(damage);
             Destroy(gameObject);
         }
 

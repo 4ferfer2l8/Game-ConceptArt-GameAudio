@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -308477171251639276}
   m_Layer: 0
   m_Name: Bala_Protagonista
-  m_TagString: Untagged
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move_Bala
   velocidade: 10
+  lifeTime: 1
 --- !u!50 &-308477171251639276
 Rigidbody2D:
   serializedVersion: 5

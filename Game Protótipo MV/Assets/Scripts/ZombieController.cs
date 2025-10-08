@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+using System.Threading;
 using UnityEngine;
 
 public class ZombieController : MonoBehaviour
@@ -9,18 +11,27 @@ public class ZombieController : MonoBehaviour
     public int damage = 1;
 
     private Transform player;
-    private PlayerController playerController; // Referência direta ao script do player
+    private Movimenta_Personagem playerController; // Referência direta ao script do player
     private Animator anim;
     private Rigidbody2D rb;
     private float attackTimer;
     private bool canAttack = true;
 
+
+    float grunidotimer= 0f;
+    float tempogrunido = 15f;
+
+    //audio 
+
+    [SerializeField] AudioSource zombiesource;
+    [SerializeField] AudioClip somzumbi;
+    [SerializeField] AudioClip[] somataquezumbi;
     void Start()
     {
         player = GameObject.FindWithTag("Player")?.transform;
         if (player != null)
         {
-            playerController = player.GetComponent<PlayerController>();
+            playerController = player.GetComponent<Movimenta_Personagem>();
         }
 
         anim = GetComponent<Animator>();
@@ -35,7 +46,7 @@ public class ZombieController : MonoBehaviour
             player = GameObject.FindWithTag("Player")?.transform;
             if (player != null)
             {
-                playerController = player.GetComponent<PlayerController>();
+                playerController = player.GetComponent<Movimenta_Personagem>();
             }
             return;
         }
@@ -47,6 +58,7 @@ public class ZombieController : MonoBehaviour
         {
             // Movimento em direção ao jogador
             rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+            zombiesource.PlayOneShot(somzumbi);
 
             // Virar o sprite na direção do movimento
             if (direction.x != 0)
@@ -78,6 +90,7 @@ public class ZombieController : MonoBehaviour
         {
             attackTimer -= Time.deltaTime;
         }
+        TocaGrunido();
     }
 
     void AttackPlayer()
@@ -89,6 +102,8 @@ public class ZombieController : MonoBehaviour
             if (distance <= attackRange + 0.2f) // Pequena margem de erro
             {
                 playerController.TakeDamage(damage);
+                zombiesource.clip = somataquezumbi[Random.Range(0, somataquezumbi.Length)];
+                zombiesource.Play();
                 Debug.Log("Zumbi atacou o jogador! Dano: " + damage);
             }
         }
@@ -98,6 +113,7 @@ public class ZombieController : MonoBehaviour
     public void EnableAttack()
     {
         canAttack = true;
+      
     }
 
     public void DisableAttack()
@@ -109,5 +125,19 @@ public class ZombieController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    void TocaGrunido()
+    {
+
+        if (grunidotimer < tempogrunido)
+        {
+            grunidotimer += Time.deltaTime;
+        }
+        else
+        {
+            zombiesource.PlayOneShot(somzumbi);
+            grunidotimer = 0f;
+        }
     }
 }

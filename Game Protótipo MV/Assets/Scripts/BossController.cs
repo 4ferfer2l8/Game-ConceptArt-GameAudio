@@ -60,7 +60,8 @@ public class BossController : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.SetTrigger("Shoot");
+            //anim.SetTrigger("Shoot");
+            anim.Play("Shoot");
         }
     }
 
@@ -68,7 +69,8 @@ public class BossController : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.SetTrigger("Summon");
+            // anim.SetTrigger("Summon");
+            anim.Play("Summon");
         }
     }
 
@@ -127,7 +129,7 @@ public class BossController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            //collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
         }
     }
 

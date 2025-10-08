@@ -1,9 +1,7 @@
-ï»¿using UnityEngine;
-using UnityEngine.Playables;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
-public class Movimenta_Personagem : MonoBehaviour
+public class Movimento_JOgador2 : MonoBehaviour
 {
 
     //componentes
@@ -14,7 +12,7 @@ public class Movimenta_Personagem : MonoBehaviour
     //audio sources
 
     //varivaveis movimento base
-    [Header("MovimentaÃ§Ã£o Base")]
+    [Header("Movimentação Base")]
     [SerializeField] float velocidadejogador = 5f;
     Vector3 movimento = new Vector3();
     [SerializeField] AudioSource playersource;
@@ -41,24 +39,23 @@ public class Movimenta_Personagem : MonoBehaviour
     float currentHealth;
     bool isInvulnerable = false;
     float invulnerabilityTime = 1f; // tempo de invulnerabilidade em segundos
-    [SerializeField] AudioClip[] machucadoclip;
 
     void Awake()
     {
-        //determinando a variavel que serÃ¡ usada para:
-        //fazer as transiÃ§Ãµes entre as animaÃ§Ãµes
+        //determinando a variavel que será usada para:
+        //fazer as transições entre as animações
         animator = GetComponent<Animator>();
-        //aplicar a fÃ­sica
+        //aplicar a física
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
 
         sprite = GetComponent<SpriteRenderer>();
 
         // debug se faltou algo na cena (ajuda a encontrar NRE cedo)
-        if (animator == null) Debug.LogWarning("Animator nÃ£o encontrado em " + name);
-        if (rb == null) Debug.LogWarning("Rigidbody2D nÃ£o encontrado em " + name);
-        if (sprite == null) Debug.LogWarning("SpriteRenderer nÃ£o encontrado em " + name);
-        if (playersource == null) Debug.LogWarning("playersource nÃ£o atribuÃ­do em " + name);
+        if (animator == null) Debug.LogWarning("Animator não encontrado em " + name);
+        if (rb == null) Debug.LogWarning("Rigidbody2D não encontrado em " + name);
+        if (sprite == null) Debug.LogWarning("SpriteRenderer não encontrado em " + name);
+        if (playersource == null) Debug.LogWarning("playersource não atribuído em " + name);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,7 +80,7 @@ public class Movimenta_Personagem : MonoBehaviour
     {
         movimento = new Vector3(movehorizontalInput, moveverticalInput, 0);
         movimento.Normalize();
-        // melhor usar rb.MovePosition para fÃ­sica, mas mantendo comportamento atual:
+        // melhor usar rb.MovePosition para física, mas mantendo comportamento atual:
         transform.position += movimento * velocidadeatual * Time.deltaTime;
 
         if (movimento.x > 0f)
@@ -108,7 +105,7 @@ public class Movimenta_Personagem : MonoBehaviour
         //comportamento do estado
         animator.Play("Idle_Frente");
 
-        //transiÃ§Ãµes de estado
+        //transições de estado
         if (movimento != Vector3.zero)
         {
             estadoAtual = EstadoJogador.correndo;
@@ -135,7 +132,7 @@ public class Movimenta_Personagem : MonoBehaviour
             }
         }
 
-        //transiÃ§Ãµes de estado
+        //transições de estado
         if (movimento == Vector3.zero)
         {
             estadoAtual = EstadoJogador.idle;
@@ -176,7 +173,7 @@ public class Movimenta_Personagem : MonoBehaviour
 
         if (timer >= tempodash)
         {
-            //transiÃ§Ã£o do estado
+            //transição do estado
             velocidadeatual = velocidadejogador;
             if (movimento.x != 0)
             {
@@ -210,7 +207,7 @@ public class Movimenta_Personagem : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isInvulnerable) return; // ignora se estÃ¡ no cooldown
+        if (isInvulnerable) return; // ignora se está no cooldown
 
         currentHealth -= amount;
         Debug.Log("Player tomou dano! Vida atual: " + currentHealth);
@@ -251,8 +248,6 @@ public class Movimenta_Personagem : MonoBehaviour
             sprite.color = Color.white;
             yield return new WaitForSeconds(0.1f);
             elapsed += 0.2f;
-            playersource.clip = machucadoclip[Random.Range(0, machucadoclip.Length)];
-            playersource.Play();
         }
 
         sprite.color = Color.white;
