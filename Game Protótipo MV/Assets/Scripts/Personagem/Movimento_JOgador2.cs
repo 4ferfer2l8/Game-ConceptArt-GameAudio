@@ -61,7 +61,7 @@ public class Movimento_JOgador2 : MonoBehaviour
     void Start()
     {
         velocidadeatual = velocidadejogador;
-        currentHealth = 3;
+        currentHealth = 20;
     }
 
     // Update is called once per frame
@@ -226,7 +226,8 @@ public class Movimento_JOgador2 : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private IEnumerator Invulnerability()
+
+    public IEnumerator Invulnerability()
     {
         if (sprite == null)
         {

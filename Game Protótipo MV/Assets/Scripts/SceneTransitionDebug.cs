@@ -11,7 +11,7 @@ public class SceneTransitionDebug : MonoBehaviour
         Debug.Log($"[SceneTransition] Trigger: entrou {other.name} (tag={other.tag})");
 
         // aceitando 'Player' ou 'player' para evitar problema de case
-        if (other.CompareTag("Player") || other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             Debug.Log("[SceneTransition] Player detectado. Carregando cena: " + nomeDaCena);
             if (string.IsNullOrEmpty(nomeDaCena))

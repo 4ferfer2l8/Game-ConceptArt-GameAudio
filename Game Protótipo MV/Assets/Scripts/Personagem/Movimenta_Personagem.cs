@@ -64,7 +64,7 @@ public class Movimenta_Personagem : MonoBehaviour
     void Start()
     {
         velocidadeatual = velocidadejogador;
-        currentHealth = 3;
+        currentHealth = 20;
     }
 
     // Update is called once per frame

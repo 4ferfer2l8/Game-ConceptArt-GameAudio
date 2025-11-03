@@ -6,6 +6,7 @@ public class Move_Bala : MonoBehaviour
     [SerializeField] float velocidade = 15f;
     [SerializeField] float lifeTime = 1f;
     Rigidbody2D rb;
+    [SerializeField] int damage = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,21 +24,30 @@ public class Move_Bala : MonoBehaviour
     void Update()
     {
 
-
-
-
-
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Zumbi" || collision.gameObject.tag == "Objetos")
+        if (collision.gameObject.tag == "Objetos")
         {
            Destroy(gameObject);
         }
+
         if(collision.gameObject.tag == "Zumbi")
         {
             collision.gameObject.GetComponent<Damage>()?.TakeDamage(1);
+            Destroy(gameObject);
+        }
+
+        if (collision.CompareTag("Enemy"))
+        {
+            BossController boss = collision.GetComponent<BossController>();
+            if (boss != null)
+            {
+                boss.TakeDamage(damage);
+                Debug.Log("Boss levou dano de projétil!");
+            }
+
+            Destroy(gameObject);
         }
     }
 }

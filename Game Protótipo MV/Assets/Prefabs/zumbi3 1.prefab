@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6088466822595927614}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0283, y: -3.7633, z: 0}
+  m_LocalPosition: {x: 2.04799, y: -0.49601, z: 0}
   m_LocalScale: {x: 2.2223902, y: 2.2223902, z: 2.2223902}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -186,11 +186,7 @@ MonoBehaviour:
   damage: 1
   zombiesource: {fileID: 3110041183772193606, guid: 9955c2b8a33d64e45838b335282058a5, type: 3}
   somzumbi: {fileID: 8300000, guid: 5c06d8ab277329d47b5d51c0c5b50d4f, type: 3}
-  somataquezumbi:
-  - {fileID: 8300000, guid: ee8fc4b304d0d19449a0e0c688717476, type: 3}
-  - {fileID: 8300000, guid: 6448ef8c09b5530438aa1b6d4334f6e1, type: 3}
-  - {fileID: 8300000, guid: 8190f56d874de8941b289c4d365c01f2, type: 3}
-  - {fileID: 8300000, guid: 5b629d68fdbef68438e493e0062a008c, type: 3}
+  somataquezumbi: {fileID: 8300000, guid: 8190f56d874de8941b289c4d365c01f2, type: 3}
 --- !u!95 &7587301020791868515
 Animator:
   serializedVersion: 7
@@ -225,4 +221,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fced1e37a00ce6748bf3702d64a12d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damage
-  maxHealth: 3
+  maxHealth: 6
