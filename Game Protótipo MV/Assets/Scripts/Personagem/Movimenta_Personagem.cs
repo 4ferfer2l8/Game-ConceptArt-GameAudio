@@ -23,8 +23,8 @@ public class Movimenta_Personagem : MonoBehaviour
     float tempopassos = 0.4f;
 
     //estados do jogador
-    enum EstadoJogador { idle, correndo, dash }
-    EstadoJogador estadoAtual = EstadoJogador.idle;
+    public enum EstadoJogador  { idle, correndo, dash } 
+    public EstadoJogador estadoAtual { get; private set; } = EstadoJogador.idle ;
 
     [Header("Dash")]
     [SerializeField] float velocidadedash = 8f;

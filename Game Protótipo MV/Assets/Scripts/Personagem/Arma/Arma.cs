@@ -6,6 +6,7 @@ public class Arma : MonoBehaviour
     [SerializeField] GameObject canodaarma;
     [SerializeField] AudioSource armasource;
     [SerializeField] AudioClip[] atiraclip;
+    public bool atirou = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +22,7 @@ public class Arma : MonoBehaviour
 
         Vector2 diferenca = new Vector2(PosMouse.x - transform.position.x, PosMouse.y - transform.position.y);
 
-        // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
+        // Mantï¿½m a rotaï¿½ï¿½o calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, zCorrigido);
@@ -29,6 +30,7 @@ public class Arma : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Atira();
+            atirou = false;
         }
     }
 
@@ -42,9 +44,10 @@ public class Arma : MonoBehaviour
 
         Vector2 diferenca = new Vector2(PosMouse.x - transform.position.x, PosMouse.y - transform.position.y);
 
-        // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
+        // Mantï¿½m a rotaï¿½ï¿½o calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         Instantiate(Bala, canodaarma.transform.position, Quaternion.Euler(0f, 0f, zCorrigido));
+        atirou = true;
     }
 }
