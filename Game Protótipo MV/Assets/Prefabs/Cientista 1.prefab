@@ -145,6 +145,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a06385690857bc143a2fcbc3faa74bc9, type: 3}
   - {fileID: 8300000, guid: 2168a35597f8a0042a86d87e7829bd02, type: 3}
   - {fileID: 8300000, guid: 39ccb2244cbe0c9419973cb5849d0182, type: 3}
+  jogador: {fileID: 7613735433744852809}
+  raio: 1.5
+  cooldowntiro: 0.5
+  timertiro: 0
+  podeatirar: 0
 --- !u!1 &7613735433744852809
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +289,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a6c5b45e42ee79443b4651a340c2c738, type: 3}
   velocidadedash: 8
   dashclip: {fileID: 8300000, guid: c082b3800ecf69a45a81afde7f61ffc8, type: 3}
+  machucadoclip: []
 --- !u!61 &2736461534723510555
 BoxCollider2D:
   m_ObjectHideFlags: 0

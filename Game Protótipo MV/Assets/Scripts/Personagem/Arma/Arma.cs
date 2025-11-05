@@ -6,6 +6,18 @@ public class Arma : MonoBehaviour
     [SerializeField] GameObject canodaarma;
     [SerializeField] AudioSource armasource;
     [SerializeField] AudioClip[] atiraclip;
+
+
+    //codigo pra arma girar em direção ao mouse
+    [SerializeField] GameObject jogador;
+    [SerializeField] float raio = 1.5f;
+
+    //cooldown do tiro
+
+    [SerializeField] float cooldowntiro;
+    [SerializeField] float timertiro;
+    [SerializeField] bool podeatirar;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,21 +27,40 @@ public class Arma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 1. Posição do mouse no mundo
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0; // z fixo para 2D
+
+        // 2. Direção entre jogador e mouse
+        Vector3 direcao = (mousePos - jogador.transform.position).normalized;
+
+        // 3. Posição da arma em órbita
+        Vector3 posicaoArma = jogador.transform.position + direcao * raio;
+        transform.position = posicaoArma;
+
+        
         Vector3 PosMouse = Input.mousePosition;
 
         PosMouse = Camera.main.ScreenToWorldPoint(PosMouse);
 
+        
         Vector2 diferenca = new Vector2(PosMouse.x - transform.position.x, PosMouse.y - transform.position.y);
 
         // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, zCorrigido);
-
-        if (Input.GetMouseButtonDown(0))
+       
+        if(timertiro>=cooldowntiro)
         {
-            Atira();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Atira();
+               timertiro = 0f;
+            }
         }
+        
+        timertiro += Time.deltaTime;
     }
 
 
@@ -45,6 +76,6 @@ public class Arma : MonoBehaviour
         // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
-        Instantiate(Bala, canodaarma.transform.position, Quaternion.Euler(0f, 0f, zCorrigido));
+        Instantiate(Bala, canodaarma.transform.position, this.gameObject.transform.rotation);//Quaternion.Euler(0f, 0f, zCorrigido));
     }
 }

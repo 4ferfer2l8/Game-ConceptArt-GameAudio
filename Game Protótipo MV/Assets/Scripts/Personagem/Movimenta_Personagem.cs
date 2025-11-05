@@ -54,11 +54,7 @@ public class Movimenta_Personagem : MonoBehaviour
 
         sprite = GetComponent<SpriteRenderer>();
 
-        // debug se faltou algo na cena (ajuda a encontrar NRE cedo)
-        if (animator == null) Debug.LogWarning("Animator não encontrado em " + name);
-        if (rb == null) Debug.LogWarning("Rigidbody2D não encontrado em " + name);
-        if (sprite == null) Debug.LogWarning("SpriteRenderer não encontrado em " + name);
-        if (playersource == null) Debug.LogWarning("playersource não atribuído em " + name);
+       
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
