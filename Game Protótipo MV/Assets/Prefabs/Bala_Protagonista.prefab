@@ -174,8 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8307d7ec0397d974d85c37557c4a2c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move_Bala
-  velocidade: 10
+  velocidade: 50
   lifeTime: 1
+  damage: 2
 --- !u!50 &-308477171251639276
 Rigidbody2D:
   serializedVersion: 5
