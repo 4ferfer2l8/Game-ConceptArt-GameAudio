@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6156505380918508027}
   - component: {fileID: -7169740975884401505}
   - component: {fileID: -5030164039014012504}
+  - component: {fileID: 8246353785928163768}
+  - component: {fileID: 5579527390634395250}
   m_Layer: 0
   m_Name: zumbi1
   m_TagString: Zumbi
@@ -184,9 +186,6 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
-  zombiesource: {fileID: 3110041183772193606, guid: 9955c2b8a33d64e45838b335282058a5, type: 3}
-  somzumbi: {fileID: 8300000, guid: 5c06d8ab277329d47b5d51c0c5b50d4f, type: 3}
-  somataquezumbi: {fileID: 8300000, guid: 6448ef8c09b5530438aa1b6d4334f6e1, type: 3}
 --- !u!95 &-7169740975884401505
 Animator:
   serializedVersion: 7
@@ -222,3 +221,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damage
   maxHealth: 6
+--- !u!114 &8246353785928163768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650682164936076059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2001723132
+      Data2: 1287024142
+      Data3: 599113885
+      Data4: 693525364
+    Path: event:/Zombie/Zombie_Spawn
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &5579527390634395250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650682164936076059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2128589346
+      Data2: 1128895145
+      Data3: -269351806
+      Data4: 308312403
+    Path: event:/Zombie/Zombie_Dying
+  Event: 
+  EventPlayTrigger: 2
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Arma : MonoBehaviour
@@ -5,10 +6,12 @@ public class Arma : MonoBehaviour
     [SerializeField] GameObject Bala;
     [SerializeField] GameObject canodaarma;
     [SerializeField] AudioSource armasource;
+    [SerializeField] float shootDelay = 0.04f;
     [SerializeField] AudioClip[] atiraclip;
+    public bool atirou = false;
 
 
-    //codigo pra arma girar em direção ao mouse
+    //codigo pra arma girar em direÃ§Ã£o ao mouse
     [SerializeField] GameObject jogador;
     [SerializeField] float raio = 1.5f;
 
@@ -27,14 +30,14 @@ public class Arma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 1. Posição do mouse no mundo
+        // 1. PosiÃ§Ã£o do mouse no mundo
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0; // z fixo para 2D
 
-        // 2. Direção entre jogador e mouse
+        // 2. DireÃ§Ã£o entre jogador e mouse
         Vector3 direcao = (mousePos - jogador.transform.position).normalized;
 
-        // 3. Posição da arma em órbita
+        // 3. PosiÃ§Ã£o da arma em Ã³rbita
         Vector3 posicaoArma = jogador.transform.position + direcao * raio;
         transform.position = posicaoArma;
 
@@ -46,7 +49,7 @@ public class Arma : MonoBehaviour
         
         Vector2 diferenca = new Vector2(PosMouse.x - transform.position.x, PosMouse.y - transform.position.y);
 
-        // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
+        // MantÃ¯Â¿Â½m a rotaÃ¯Â¿Â½Ã¯Â¿Â½o calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         transform.rotation = Quaternion.Euler(0f, 0f, zCorrigido);
@@ -63,17 +66,23 @@ public class Arma : MonoBehaviour
         timertiro += Time.deltaTime;
     }
 
+    IEnumerator ShootTime()
+    {
+        yield return new WaitForSeconds(shootDelay);
+        atirou = false;
+        
+    }
 
     void Atira()
     {
-        armasource.PlayOneShot(atiraclip[Random.Range(0, atiraclip.Length)]);
+        //armasource.PlayOneShot(atiraclip[Random.Range(0, atiraclip.Length)]);
         Vector3 PosMouse = Input.mousePosition;
 
         PosMouse = Camera.main.ScreenToWorldPoint(PosMouse);
 
         Vector2 diferenca = new Vector2(PosMouse.x - transform.position.x, PosMouse.y - transform.position.y);
 
-        // Mantém a rotação calculada e aplica um ajuste de +90 graus no eixo Z
+        // MantÃ¯Â¿Â½m a rotaÃ¯Â¿Â½Ã¯Â¿Â½o calculada e aplica um ajuste de +90 graus no eixo Z
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         Instantiate(Bala, canodaarma.transform.position, this.gameObject.transform.rotation);//Quaternion.Euler(0f, 0f, zCorrigido));

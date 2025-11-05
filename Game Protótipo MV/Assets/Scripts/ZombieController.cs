@@ -10,22 +10,30 @@ public class ZombieController : MonoBehaviour
     public float attackCooldown = 1.2f;
     public int damage = 1;
 
+    //FMOD States
+    public bool isAttacking;
+    public bool isWalking;
+    
+
     private Transform player;
-    private Movimenta_Personagem playerController; // Referência direta ao script do player
+    private Movimenta_Personagem playerController; // Referï¿½ncia direta ao script do player
     private Animator anim;
     private Rigidbody2D rb;
     private float attackTimer;
     private bool canAttack = true;
-
-
+    
+    //Audio Antigo
+    /*
     float grunidotimer= 0f;
     float tempogrunido = 15f;
+     
 
     //audio 
 
     [SerializeField] AudioSource zombiesource;
     [SerializeField] AudioClip somzumbi;
     [SerializeField] AudioClip somataquezumbi;
+    */
     void Start()
     {
         player = GameObject.FindWithTag("Player")?.transform;
@@ -56,11 +64,12 @@ public class ZombieController : MonoBehaviour
 
         if (distance > attackRange)
         {
-            // Movimento em direção ao jogador
+            // Movimento em direï¿½ï¿½o ao jogador
             rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
-            zombiesource.PlayOneShot(somzumbi);
+            isWalking = true;
+            //zombiesource.PlayOneShot(somzumbi);
 
-            // Virar o sprite na direção do movimento
+            // Virar o sprite na direï¿½ï¿½o do movimento
             if (direction.x != 0)
                 transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
 
@@ -69,19 +78,22 @@ public class ZombieController : MonoBehaviour
         }
         else
         {
-            // Parar de andar quando está no alcance de ataque
+            // Parar de andar quando estï¿½ no alcance de ataque
             anim.SetBool("isWalking", false);
+            isWalking = false;
 
             // Atacar quando o cooldown permitir
             if (canAttack && attackTimer <= 0f)
             {
                 anim.SetBool("isAttacking", true);
+                isAttacking = true;
                 AttackPlayer();
                 attackTimer = attackCooldown;
             }
             else
             {
                 anim.SetBool("isAttacking", false);
+                isAttacking = false;
             }
         }
 
@@ -90,26 +102,26 @@ public class ZombieController : MonoBehaviour
         {
             attackTimer -= Time.deltaTime;
         }
-        TocaGrunido();
+        //TocaGrunido();
     }
 
     void AttackPlayer()
     {
         if (playerController != null)
         {
-            // Verifica a distância novamente no momento do ataque
+            // Verifica a distï¿½ncia novamente no momento do ataque
             float distance = Vector2.Distance(transform.position, player.position);
             if (distance <= attackRange + 0.2f) // Pequena margem de erro
             {
                 playerController.TakeDamage(damage);
-                zombiesource.clip = somataquezumbi;
-                zombiesource.Play();
+                //zombiesource.clip = somataquezumbi;
+                //zombiesource.Play();
                 Debug.Log("Zumbi atacou o jogador! Dano: " + damage);
             }
         }
     }
 
-    // Método chamado pela animação (Animation Event)
+    // Mï¿½todo chamado pela animaï¿½ï¿½o (Animation Event)
     public void EnableAttack()
     {
         canAttack = true;
@@ -127,7 +139,7 @@ public class ZombieController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    void TocaGrunido()
+    /*void TocaGrunido()
     {
 
         if (grunidotimer < tempogrunido)
@@ -140,4 +152,5 @@ public class ZombieController : MonoBehaviour
             grunidotimer = 0f;
         }
     }
+    */
 }

@@ -17,14 +17,20 @@ public class Movimenta_Personagem : MonoBehaviour
     [Header("Movimentação Base")]
     [SerializeField] float velocidadejogador = 5f;
     Vector3 movimento = new Vector3();
-    [SerializeField] AudioSource playersource;
+    //Old Sound Source
+    /*[SerializeField] AudioSource playersource;
     [SerializeField] AudioClip[] passosclip;
+    */
     float timerpassos = 0f;
     float tempopassos = 0.4f;
 
+    //Fmod Parameters
+    public bool isDashing;
+    public bool isHurt;
+
     //estados do jogador
-    enum EstadoJogador { idle, correndo, dash }
-    EstadoJogador estadoAtual = EstadoJogador.idle;
+    public enum EstadoJogador  { idle, correndo, dash } 
+    public EstadoJogador estadoAtual { get; private set; } = EstadoJogador.idle ;
 
     [Header("Dash")]
     [SerializeField] float velocidadedash = 8f;
@@ -68,6 +74,7 @@ public class Movimenta_Personagem : MonoBehaviour
     {
         //coleta inputs do jogador
         inputdash = Input.GetKey(KeyCode.LeftShift);
+       
         if (estadoAtual != EstadoJogador.dash)
         {
             moveverticalInput = Input.GetAxisRaw("Vertical");
@@ -114,7 +121,6 @@ public class Movimenta_Personagem : MonoBehaviour
     void Correndo()
     {
         //comportamento do estado
-        TocaPassos();
         if (movimento.x != 0)
         {
             animator.Play("Andando_Lado");
@@ -144,11 +150,19 @@ public class Movimenta_Personagem : MonoBehaviour
     }
 
     void Dash()
-    {
+    {    
+        //Old Dash sound
+        /*
         if (playersource != null && dashclip != null)
         {
-            playersource.PlayOneShot(dashclip);
+            isDashing = true;
         }
+        else
+        {
+            isDashing = false;
+        }
+        */
+        
 
         //comportamento do estado
         if (movimento.x != 0)
@@ -184,8 +198,8 @@ public class Movimenta_Personagem : MonoBehaviour
             }
         }
     }
-
-    void TocaPassos()
+    // som de passos antigo
+    /*void TocaPassos()
     {
         if (passosclip == null || passosclip.Length == 0)
             return;
@@ -203,12 +217,14 @@ public class Movimenta_Personagem : MonoBehaviour
             timerpassos = 0f;
         }
     }
+    */
 
     public void TakeDamage(int amount)
     {
         if (isInvulnerable) return; // ignora se está no cooldown
 
         currentHealth -= amount;
+        isHurt = true;
         Debug.Log("Player tomou dano! Vida atual: " + currentHealth);
 
         if (currentHealth <= 0)
@@ -247,8 +263,11 @@ public class Movimenta_Personagem : MonoBehaviour
             sprite.color = Color.white;
             yield return new WaitForSeconds(0.1f);
             elapsed += 0.2f;
-            playersource.clip = machucadoclip[Random.Range(0, machucadoclip.Length)];
+            
+            //old Hit sound
+            /*playersource.clip = machucadoclip[Random.Range(0, machucadoclip.Length)];
             playersource.Play();
+            */
         }
 
         sprite.color = Color.white;
