@@ -679,6 +679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e700c92b5010698438e14916afa66c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: "Assembly-CSharp::Fun\xE7\xF5es_Menu"
+  isClicking: 0
+  Unclicked: 0
 --- !u!4 &535172319
 Transform:
   m_ObjectHideFlags: 0
@@ -844,6 +846,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197031767}
   m_CullTransparentMesh: 1
+--- !u!1 &1402603864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402603865}
+  - component: {fileID: 1402603867}
+  - component: {fileID: 1402603866}
+  m_Layer: 0
+  m_Name: Main MenuAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402603865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402603864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 622.574, y: 280.23337, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1402603866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402603864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 664053302
+      Data2: 1252665354
+      Data3: -17686602
+      Data4: 1882107717
+    Path: event:/OST/Menu
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1402603867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402603864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444f8d910737dc94eb9e117851a8a513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuAudioManager
+  ClickEvent:
+    Guid:
+      Data1: -1952150458
+      Data2: 1239171064
+      Data3: -1474181475
+      Data4: -566175303
+    Path: event:/UI/Click In
+  UnClickEvent:
+    Guid:
+      Data1: 1333596667
+      Data2: 1178526913
+      Data3: -1784306303
+      Data4: -1439385377
+    Path: event:/UI/Click Out
+  menu: {fileID: 182905402}
+  controlador: {fileID: 535172318}
 --- !u!1 &1505678504
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +950,7 @@ GameObject:
   - component: {fileID: 1505678506}
   - component: {fileID: 1505678505}
   - component: {fileID: 1505678508}
+  - component: {fileID: 1505678509}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -981,6 +1076,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1505678509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505678504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1678958158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,3 +1578,4 @@ SceneRoots:
   - {fileID: 182905406}
   - {fileID: 456050832}
   - {fileID: 535172319}
+  - {fileID: 1402603865}

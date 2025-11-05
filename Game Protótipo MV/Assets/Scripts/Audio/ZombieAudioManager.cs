@@ -28,6 +28,7 @@ public class ZombieAudioManager : MonoBehaviour
             if (time >= rate)
             {
                 Passos();
+                Debug.Log("Zumbi Passos");
                 time = 0;
             }
         }
