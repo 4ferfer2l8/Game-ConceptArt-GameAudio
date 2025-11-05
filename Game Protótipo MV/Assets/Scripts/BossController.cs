@@ -21,8 +21,8 @@ public class BossController : MonoBehaviour
     private int currentHealth;
     private float attackTimer;
     private float summonTimer;
-    private bool isShooting = false;
-    private bool isSummoning = false;
+    public bool isShooting { get; private set; } = false;
+    public bool isSummoning { get; private set; } = false;
 
     void Start()
     {

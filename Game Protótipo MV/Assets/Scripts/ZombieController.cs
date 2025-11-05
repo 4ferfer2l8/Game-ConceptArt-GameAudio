@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using NUnit.Framework;
 using System.Threading;
 using UnityEngine;
 
@@ -11,9 +12,8 @@ public class ZombieController : MonoBehaviour
     public int damage = 1;
 
     //FMOD States
-    public bool isAttacking;
-    public bool isWalking;
-    
+    public bool isAttacking = false;
+    public bool isWalking = false;
 
     private Transform player;
     private Movimenta_Personagem playerController; // Refer�ncia direta ao script do player
@@ -48,6 +48,7 @@ public class ZombieController : MonoBehaviour
 
     void Update()
     {
+        
         if (player == null || playerController == null)
         {
             // Tenta reencontrar o player se foi perdido
@@ -66,7 +67,7 @@ public class ZombieController : MonoBehaviour
         {
             // Movimento em dire��o ao jogador
             rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
-            isWalking = true;
+            
             //zombiesource.PlayOneShot(somzumbi);
 
             // Virar o sprite na dire��o do movimento
@@ -75,18 +76,17 @@ public class ZombieController : MonoBehaviour
 
             anim.SetBool("isWalking", true);
             anim.SetBool("isAttacking", false);
+            
         }
         else
         {
             // Parar de andar quando est� no alcance de ataque
             anim.SetBool("isWalking", false);
-            isWalking = false;
 
             // Atacar quando o cooldown permitir
             if (canAttack && attackTimer <= 0f)
             {
                 anim.SetBool("isAttacking", true);
-                isAttacking = true;
                 AttackPlayer();
                 attackTimer = attackCooldown;
             }
@@ -102,6 +102,7 @@ public class ZombieController : MonoBehaviour
         {
             attackTimer -= Time.deltaTime;
         }
+        isWalking = anim.GetBool("isWalking");
         //TocaGrunido();
     }
 
@@ -116,6 +117,7 @@ public class ZombieController : MonoBehaviour
                 playerController.TakeDamage(damage);
                 //zombiesource.clip = somataquezumbi;
                 //zombiesource.Play();
+                isAttacking = true;
                 Debug.Log("Zumbi atacou o jogador! Dano: " + damage);
             }
         }

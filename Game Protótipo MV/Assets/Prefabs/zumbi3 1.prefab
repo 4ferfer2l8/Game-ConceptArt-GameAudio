@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5066343064248553040}
   - component: {fileID: -6084450105298218010}
   - component: {fileID: -1677010434433150557}
+  - component: {fileID: 532790429805826929}
   m_Layer: 0
   m_Name: zumbi3 1
   m_TagString: Zumbi
@@ -186,6 +187,9 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
+  isAttacking: 0
+  isWalking: 0
+  isDead: 0
 --- !u!95 &7587301020791868515
 Animator:
   serializedVersion: 7
@@ -283,3 +287,32 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &532790429805826929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088466822595927614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044001b6a7a871947a7ccadedb81788d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieAudioManager
+  FootsepEvent:
+    Guid:
+      Data1: 693087082
+      Data2: 1084209805
+      Data3: 1496694180
+      Data4: -2038299594
+    Path: event:/Zombie/Zombie_Walk
+  AttackEvent:
+    Guid:
+      Data1: 251397577
+      Data2: 1336481229
+      Data3: -1865198422
+      Data4: -175683155
+    Path: event:/Zombie/Zombie_Attack
+  rate: 0.85
+  zombie: {fileID: 6088466822595927614}
+  controlador: {fileID: 4537252418141219260}
