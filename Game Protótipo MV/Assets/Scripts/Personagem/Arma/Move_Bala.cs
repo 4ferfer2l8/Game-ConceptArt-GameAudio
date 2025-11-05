@@ -3,7 +3,7 @@ using UnityEngine;
 public class Move_Bala : MonoBehaviour
 {
 
-    [SerializeField] float velocidade = 15f;
+    [SerializeField] float velocidade = 3000f;
     [SerializeField] float lifeTime = 1f;
     Rigidbody2D rb;
     [SerializeField] int damage = 2;
@@ -14,9 +14,10 @@ public class Move_Bala : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Vector3 mouseScreen = Input.mousePosition;
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreen);
+        mouseWorld.z = transform.position.z;
         Vector2 direcao = (mouseWorld - transform.position);
         // Move a bala em direção ao mouse
-        rb.linearVelocity = direcao * velocidade;
+        rb.linearVelocity = transform.right * velocidade;
         Destroy(gameObject, lifeTime);
     }
 
