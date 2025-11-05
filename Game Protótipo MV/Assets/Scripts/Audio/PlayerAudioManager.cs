@@ -11,6 +11,7 @@ public class PlayerAudioManager : MonoBehaviour
     [SerializeField] GameObject player;
     float time;
     [SerializeField] Movimenta_Personagem controlador;
+    Movimenta_Personagem.EstadoJogador lastState;
     [SerializeField] Arma controlaArma;   
     void Start()
     {
@@ -43,10 +44,11 @@ public class PlayerAudioManager : MonoBehaviour
                 time = 0;
             }
         }
-        if (controlador.estadoAtual == Movimenta_Personagem.EstadoJogador.dash)
+        if (controlador.estadoAtual == Movimenta_Personagem.EstadoJogador.dash && lastState != Movimenta_Personagem.EstadoJogador.dash)
         {
             Dash();
         }
+        lastState = controlador.estadoAtual;
         if (controlaArma.atirou)
         {
             Shoot();

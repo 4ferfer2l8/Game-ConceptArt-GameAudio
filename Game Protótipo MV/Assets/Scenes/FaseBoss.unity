@@ -37091,6 +37091,7 @@ GameObject:
   - component: {fileID: 1456436875}
   - component: {fileID: 1456436877}
   - component: {fileID: 1456436878}
+  - component: {fileID: 1456436879}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -37125,7 +37126,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Low HP Percussion
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -37195,7 +37198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456436874}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34eb3ae1bd614b746a25ce415b44b135, type: 3}
   m_Name: 
@@ -37224,6 +37227,19 @@ MonoBehaviour:
   rate: 0
   boss: {fileID: 1287625896}
   controlador: {fileID: 1287625898}
+--- !u!114 &1456436879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456436874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54e4dba62eac4b45a4267ba74d15b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OSTAudioManager
+  controlador: {fileID: 1803670981}
 --- !u!1 &1470321317
 GameObject:
   m_ObjectHideFlags: 0
@@ -37531,7 +37547,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61963534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5f2550fe542d0148bf272d807a55598, type: 3}
   m_Name: 
