@@ -403,6 +403,114 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &351119760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351119763}
+  - component: {fileID: 351119762}
+  - component: {fileID: 351119761}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351119761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351119760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce28accd2e56fb4d801e7ab54b7a92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
+  FootsepEvent:
+    Guid:
+      Data1: 1736069571
+      Data2: 1141280015
+      Data3: -1945674587
+      Data4: -973214850
+    Path: event:/Player/Player_Walk
+  ShootEvent:
+    Guid:
+      Data1: -785177956
+      Data2: 1310536417
+      Data3: 613500054
+      Data4: 1419612891
+    Path: event:/Player/Player_Shoot
+  HitEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  DashEvent:
+    Guid:
+      Data1: -1941554502
+      Data2: 1118139482
+      Data3: -1525191287
+      Data4: 1063397141
+    Path: event:/Player/Player_Dash
+  rate: 0.43
+  player: {fileID: 916692243}
+  controlador: {fileID: 916692245}
+  controlaArma: {fileID: 1142948666}
+--- !u!114 &351119762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351119760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1303783588
+      Data2: 1135063487
+      Data3: 1666421653
+      Data4: -573633123
+    Path: event:/Ambience/Ambience
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &351119763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351119760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 622.574, y: 280.23337, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &481939893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27154,6 +27262,33 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &916692243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7613735433744852809, guid: 7fefe36752d8f224d96860a6210d34e7, type: 3}
+  m_PrefabInstance: {fileID: 481939893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &916692245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7393929680911576522, guid: 7fefe36752d8f224d96860a6210d34e7, type: 3}
+  m_PrefabInstance: {fileID: 481939893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916692243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3bfcf5c65cb744a9126ad872cfc572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movimenta_Personagem
+--- !u!114 &1142948666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2442128593754326768, guid: 7fefe36752d8f224d96860a6210d34e7, type: 3}
+  m_PrefabInstance: {fileID: 481939893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2270c7b6e04261a46ac5eb4a508999ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Arma
 --- !u!1 &1243488571
 GameObject:
   m_ObjectHideFlags: 0
@@ -27488,3 +27623,4 @@ SceneRoots:
   - {fileID: 35089563}
   - {fileID: 54728425}
   - {fileID: 1476051921}
+  - {fileID: 351119763}

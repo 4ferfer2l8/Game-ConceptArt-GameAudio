@@ -28,7 +28,10 @@ public class PlayerAudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShotAttached(ShootEvent, player);
     }
-    // Update is called once per frame
+    public void Hit()
+    {
+        RuntimeManager.PlayOneShotAttached(HitEvent, player);
+    }
     void Update()
     {
         time += Time.deltaTime;
@@ -47,6 +50,13 @@ public class PlayerAudioManager : MonoBehaviour
         if (controlaArma.atirou)
         {
             Shoot();
+            controlaArma.atirou = false;
+            Debug.Log("som do tiro parou");
+        }
+        if (controlador.isHurt)
+        {
+            Hit();
+            controlador.isHurt = false;  
         }
     }
 }

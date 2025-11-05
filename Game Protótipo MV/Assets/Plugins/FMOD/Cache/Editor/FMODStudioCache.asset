@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8849395018382038045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Player_Hit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Player_Hit
+  Guid:
+    Data1: -1768873580
+    Data2: 1266817835
+    Data3: -2083927131
+    Data4: 1207511133
+  Banks:
+  - {fileID: 243603678009933642}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 520
 --- !u!114 &-5977014246725543771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1819
+--- !u!114 &-5881902394653107164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hunter/Hunter Death
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Hunter/Hunter Death
+  Guid:
+    Data1: 273407259
+    Data2: 1300996896
+    Data3: -2074723406
+    Data4: -885795488
+  Banks:
+  - {fileID: 243603678009933642}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2580
 --- !u!114 &-4220498336206713807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +96,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/AMBIENCE.bank
   Name: AMBIENCE
   StudioPath: bank:/AMBIENCE
-  lastModified: 638977702703507535
+  lastModified: 638979008208160737
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 288480
   Exists: 1
 --- !u!114 &-2210383971167247953
 MonoBehaviour:
@@ -69,12 +123,39 @@ MonoBehaviour:
   - {fileID: 7043655902016228176}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters:
   - {fileID: 5093641792358533968}
   MinDistance: 1
   MaxDistance: 20
   Length: 211
+--- !u!114 &-1157191311930385891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Low Health
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Low Health
+  Guid:
+    Data1: 1689143698
+    Data2: 1196038008
+    Data3: -174793600
+    Data4: 1786550834
+  Banks:
+  - {fileID: 4493810073422901628}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-996835754885125098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,11 +171,38 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 638977702703620979
+  lastModified: 638979008210271617
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 174112
   Exists: 1
+--- !u!114 &-96240359052955819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST/Menu
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST/Menu
+  Guid:
+    Data1: 664053302
+    Data2: 1252665354
+    Data3: -17686602
+    Data4: 1882107717
+  Banks:
+  - {fileID: -996835754885125098}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,13 +231,23 @@ MonoBehaviour:
   - {fileID: -5977014246725543771}
   - {fileID: 1392046060310991653}
   - {fileID: 1546047741656325133}
+  - {fileID: -1157191311930385891}
+  - {fileID: 3142111368831925321}
+  - {fileID: -5881902394653107164}
+  - {fileID: 4053512836922338002}
+  - {fileID: 4806823966042995577}
+  - {fileID: 7501243555218069983}
+  - {fileID: 7213244836616856869}
+  - {fileID: -96240359052955819}
+  - {fileID: -8849395018382038045}
+  - {fileID: 4474048771435992101}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4493810073422901628}
   StringsBanks:
   - {fileID: 4633048001616169296}
   cacheVersion: 131856
-  cacheTime: 638977702706230070
+  cacheTime: 638979041435950788
   SerializableEventsDict:
   - key: event:/UI/Click In
     index: 0
@@ -147,6 +265,26 @@ MonoBehaviour:
     index: 6
   - key: event:/Zombie/Zombie_Dying
     index: 7
+  - key: snapshot:/Low Health
+    index: 8
+  - key: event:/Hunter/Hunter Shoot Normal
+    index: 9
+  - key: event:/Hunter/Hunter Death
+    index: 10
+  - key: event:/Hunter/HunterSpawn
+    index: 11
+  - key: event:/Hunter/Hunter Invoke
+    index: 12
+  - key: event:/Ambience/Ambience
+    index: 13
+  - key: event:/OST/Level
+    index: 14
+  - key: event:/OST/Menu
+    index: 15
+  - key: event:/Player/Player_Hit
+    index: 16
+  - key: event:/Zombie/Zombie_Walk
+    index: 17
 --- !u!114 &243603678009933642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,10 +300,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/VO.bank
   Name: VO
   StudioPath: bank:/VO
-  lastModified: 638977702706230070
+  lastModified: 638979008210966357
   FileSizes:
   - Name: Desktop
-    Value: 138336
+    Value: 261728
   Exists: 1
 --- !u!114 &1392046060310991653
 MonoBehaviour:
@@ -248,6 +386,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &3142111368831925321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hunter/Hunter Shoot Normal
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Hunter/Hunter Shoot Normal
+  Guid:
+    Data1: -1391248875
+    Data2: 1089574307
+    Data3: 1325523357
+    Data4: 671239101
+  Banks:
+  - {fileID: 7043655902016228176}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 512
 --- !u!114 &3143515914671342848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +467,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &4053512836922338002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hunter/HunterSpawn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Hunter/HunterSpawn
+  Guid:
+    Data1: 1482674722
+    Data2: 1120733704
+    Data3: -1486788712
+    Data4: -1259711749
+  Banks:
+  - {fileID: 243603678009933642}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3045
+--- !u!114 &4474048771435992101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Zombie/Zombie_Walk
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Zombie/Zombie_Walk
+  Guid:
+    Data1: 693087082
+    Data2: 1084209805
+    Data3: 1496694180
+    Data4: -2038299594
+  Banks:
+  - {fileID: 7043655902016228176}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 313
 --- !u!114 &4493810073422901628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,10 +536,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638977702703551233
+  lastModified: 638979041435286335
   FileSizes:
   - Name: Desktop
-    Value: 1670
+    Value: 2146
   Exists: 1
 --- !u!114 &4633048001616169296
 MonoBehaviour:
@@ -337,11 +556,38 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638977702703582185
+  lastModified: 638979041435296350
   FileSizes:
   - Name: Desktop
-    Value: 1460
+    Value: 1906
   Exists: 1
+--- !u!114 &4806823966042995577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hunter/Hunter Invoke
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Hunter/Hunter Invoke
+  Guid:
+    Data1: 465049311
+    Data2: 1244893320
+    Data3: -1012857966
+    Data4: 1370867585
+  Banks:
+  - {fileID: 243603678009933642}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &5093641792358533968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,11 +634,11 @@ MonoBehaviour:
   - {fileID: 7043655902016228176}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 540
+  Length: 419
 --- !u!114 &7043655902016228176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,8 +654,62 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 638977702705228210
+  lastModified: 638979041435950788
   FileSizes:
   - Name: Desktop
-    Value: 80416
+    Value: 101600
   Exists: 1
+--- !u!114 &7213244836616856869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST/Level
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST/Level
+  Guid:
+    Data1: 2132182067
+    Data2: 1337496000
+    Data3: 335364759
+    Data4: -2079159824
+  Banks:
+  - {fileID: -996835754885125098}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18667
+--- !u!114 &7501243555218069983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Ambience
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/Ambience
+  Guid:
+    Data1: 1303783588
+    Data2: 1135063487
+    Data3: 1666421653
+    Data4: -573633123
+  Banks:
+  - {fileID: -4220498336206713807}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22000

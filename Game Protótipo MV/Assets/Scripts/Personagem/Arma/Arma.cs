@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Arma : MonoBehaviour
@@ -5,6 +6,7 @@ public class Arma : MonoBehaviour
     [SerializeField] GameObject Bala;
     [SerializeField] GameObject canodaarma;
     [SerializeField] AudioSource armasource;
+    [SerializeField] float shootDelay = 0.04f;
     [SerializeField] AudioClip[] atiraclip;
     public bool atirou = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,14 +32,21 @@ public class Arma : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Atira();
-            atirou = false;
+            
+            //StartCoroutine(ShootTime());
         }
     }
 
+    IEnumerator ShootTime()
+    {
+        yield return new WaitForSeconds(shootDelay);
+        atirou = false;
+        
+    }
 
     void Atira()
     {
-        armasource.PlayOneShot(atiraclip[Random.Range(0, atiraclip.Length)]);
+        //armasource.PlayOneShot(atiraclip[Random.Range(0, atiraclip.Length)]);
         Vector3 PosMouse = Input.mousePosition;
 
         PosMouse = Camera.main.ScreenToWorldPoint(PosMouse);
