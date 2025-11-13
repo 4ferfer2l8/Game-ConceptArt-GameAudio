@@ -36809,10 +36809,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -38577,14 +38577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movimenta_Personagem
   velocidadejogador: 5
-  movimento: {x: 0, y: 0, z: 0}
-  playersource: {fileID: 1644569833}
-  passosclip:
-  - {fileID: 8300000, guid: 45bcac394868cbb4eb030c0ca1f87ae6, type: 3}
-  - {fileID: 8300000, guid: 8cdc3376c5b60fb4faaebe12fa6faac8, type: 3}
-  - {fileID: 8300000, guid: 11d610f90818d074d8bfae0c7acbb1ca, type: 3}
-  - {fileID: 8300000, guid: 5df00ce7190c18d41a793bab38228be4, type: 3}
-  - {fileID: 8300000, guid: a6c5b45e42ee79443b4651a340c2c738, type: 3}
+  isDashing: 0
+  isHurt: 0
   velocidadedash: 8
   dashclip: {fileID: 8300000, guid: c082b3800ecf69a45a81afde7f61ffc8, type: 3}
   machucadoclip:
