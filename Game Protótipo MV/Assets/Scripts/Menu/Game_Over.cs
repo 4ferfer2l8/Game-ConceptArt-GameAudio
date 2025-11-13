@@ -32,6 +32,6 @@ public class Game_Over : MonoBehaviour
 
     public void ReiniciaBoss()
     {
-               SceneManager.LoadScene("FaseBoss");
+        SceneManager.LoadScene("FaseBoss");
     }
 }
