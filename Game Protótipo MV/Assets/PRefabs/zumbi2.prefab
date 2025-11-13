@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 8023343133734505086}
   - component: {fileID: 7482953033131368489}
   - component: {fileID: -1757214117206647699}
+  - component: {fileID: 5945051080214854362}
+  - component: {fileID: 2209743073163806649}
+  - component: {fileID: 1621322050935057574}
   m_Layer: 0
   m_Name: zumbi2
   m_TagString: Zumbi
@@ -184,9 +187,9 @@ MonoBehaviour:
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
-  zombiesource: {fileID: 3110041183772193606, guid: 9955c2b8a33d64e45838b335282058a5, type: 3}
-  somzumbi: {fileID: 8300000, guid: 5c06d8ab277329d47b5d51c0c5b50d4f, type: 3}
-  somataquezumbi: {fileID: 8300000, guid: 8190f56d874de8941b289c4d365c01f2, type: 3}
+  isAttacking: 0
+  isWalking: 0
+  isDead: 0
 --- !u!95 &7482953033131368489
 Animator:
   serializedVersion: 7
@@ -222,3 +225,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damage
   maxHealth: 6
+--- !u!114 &5945051080214854362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128187154447657655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2001723132
+      Data2: 1287024142
+      Data3: 599113885
+      Data4: 693525364
+    Path: event:/Zombie/Zombie_Spawn
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2209743073163806649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128187154447657655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2128589346
+      Data2: 1128895145
+      Data3: -269351806
+      Data4: 308312403
+    Path: event:/Zombie/Zombie_Dying
+  Event: 
+  EventPlayTrigger: 2
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1621322050935057574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128187154447657655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044001b6a7a871947a7ccadedb81788d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieAudioManager
+  FootsepEvent:
+    Guid:
+      Data1: 693087082
+      Data2: 1084209805
+      Data3: 1496694180
+      Data4: -2038299594
+    Path: event:/Zombie/Zombie_Walk
+  AttackEvent:
+    Guid:
+      Data1: 251397577
+      Data2: 1336481229
+      Data3: -1865198422
+      Data4: -175683155
+    Path: event:/Zombie/Zombie_Attack
+  rate: 0.85
+  zombie: {fileID: 2128187154447657655}
+  controlador: {fileID: 8023343133734505086}

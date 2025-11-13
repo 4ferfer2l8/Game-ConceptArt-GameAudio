@@ -36,6 +36,6 @@ public class Damage : MonoBehaviour
     private void Die()
     {
         Debug.Log(gameObject.name + " morreu!");
-        Destroy(gameObject); // ou animação de morte
+        Destroy(gameObject); // ou animaï¿½ï¿½o de morte
     }
 }
