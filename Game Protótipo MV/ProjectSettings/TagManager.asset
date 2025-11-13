@@ -10,6 +10,7 @@ TagManager:
   - Zumbi
   - Cenario
   - Bala
+  - Arma
   layers:
   - Default
   - TransparentFX

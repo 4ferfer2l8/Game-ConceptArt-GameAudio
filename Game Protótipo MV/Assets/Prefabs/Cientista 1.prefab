@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2442128593754326768}
   m_Layer: 0
   m_Name: Arma
-  m_TagString: Untagged
+  m_TagString: Arma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.58, y: 0.97, z: 0}
-  m_LocalScale: {x: 10.992292, y: 10.992292, z: 10.992292}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4291122695519183859}
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movimenta_Personagem
   velocidadejogador: 5
+  movimento: {x: 0, y: 0, z: 0}
   playersource: {fileID: 0}
   passosclip:
   - {fileID: 8300000, guid: 45bcac394868cbb4eb030c0ca1f87ae6, type: 3}

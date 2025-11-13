@@ -51,13 +51,14 @@ public class ZombieController : MonoBehaviour
             return;
         }
 
-        Vector2 direction = (player.position - transform.position).normalized;
+        Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance > attackRange)
         {
             // Movimento em direção ao jogador
-            rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+            //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+            transform.position += (direction * speed * Time.deltaTime);
             zombiesource.PlayOneShot(somzumbi);
 
             // Virar o sprite na direção do movimento

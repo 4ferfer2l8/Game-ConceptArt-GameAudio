@@ -16,7 +16,7 @@ public class Movimenta_Personagem : MonoBehaviour
     //varivaveis movimento base
     [Header("Movimentação Base")]
     [SerializeField] float velocidadejogador = 5f;
-    Vector3 movimento = new Vector3();
+    public Vector3 movimento = new Vector3();
     [SerializeField] AudioSource playersource;
     [SerializeField] AudioClip[] passosclip;
     float timerpassos = 0f;
@@ -247,7 +247,7 @@ public class Movimenta_Personagem : MonoBehaviour
             sprite.color = Color.white;
             yield return new WaitForSeconds(0.1f);
             elapsed += 0.2f;
-            playersource.clip = machucadoclip[Random.Range(0, machucadoclip.Length)];
+            //playersource.clip = machucadoclip[Random.Range(0, machucadoclip.Length)];
             playersource.Play();
         }
 
