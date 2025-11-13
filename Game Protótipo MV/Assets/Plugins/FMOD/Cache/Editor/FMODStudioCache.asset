@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 520
+--- !u!114 &-8674876738151911351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low HP Percussion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Low HP Percussion
+  StudioPath: parameter:/Low HP Percussion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3032037113
+    data2: 470117792
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5977014246725543771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +168,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 638979176698424663
+  lastModified: 638979364646510163
   FileSizes:
   - Name: Desktop
-    Value: 552256
+    Value: 553184
   Exists: 1
 --- !u!114 &-96240359052955819
 MonoBehaviour:
@@ -214,13 +238,14 @@ MonoBehaviour:
   - {fileID: -8849395018382038045}
   - {fileID: 4474048771435992101}
   - {fileID: 1602842310107526659}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -8674876738151911351}
   MasterBanks:
   - {fileID: 4493810073422901628}
   StringsBanks:
   - {fileID: 4633048001616169296}
   cacheVersion: 131856
-  cacheTime: 638979181386360939
+  cacheTime: 638979364646510163
   SerializableEventsDict:
   - key: event:/UI/Click In
     index: 0
@@ -536,10 +561,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638979181386351660
+  lastModified: 638979362810998701
   FileSizes:
   - Name: Desktop
-    Value: 1670
+    Value: 1856
   Exists: 1
 --- !u!114 &4633048001616169296
 MonoBehaviour:
@@ -556,10 +581,10 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638979181386360939
+  lastModified: 638979362811015266
   FileSizes:
   - Name: Desktop
-    Value: 1890
+    Value: 1950
   Exists: 1
 --- !u!114 &4806823966042995577
 MonoBehaviour:
@@ -654,7 +679,7 @@ MonoBehaviour:
   Path: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 638979176698743221
+  lastModified: 638979335399923990
   FileSizes:
   - Name: Desktop
     Value: 126912
@@ -682,7 +707,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7729235221398603764}
   MinDistance: 1
   MaxDistance: 20
   Length: 12435
@@ -713,3 +739,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 22000
+--- !u!114 &7729235221398603764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level/Low HP Percussion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Low HP Percussion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3032037113
+    data2: 470117792
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1

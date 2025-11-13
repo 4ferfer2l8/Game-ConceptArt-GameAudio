@@ -11,11 +11,13 @@ public class ZombieController : MonoBehaviour
     public int damage = 1;
 
     private Transform player;
-    private Movimenta_Personagem playerController; // Referência direta ao script do player
+    private Movimenta_Personagem playerController; // Referï¿½ncia direta ao script do player
     private Animator anim;
     private Rigidbody2D rb;
     private float attackTimer;
     private bool canAttack = true;
+    public bool isWalking = false;
+    public bool isAttacking = false;    
 
 
     float grunidotimer= 0f;
@@ -56,12 +58,12 @@ public class ZombieController : MonoBehaviour
 
         if (distance > attackRange)
         {
-            // Movimento em direção ao jogador
+            // Movimento em direï¿½ï¿½o ao jogador
             //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
             transform.position += (direction * speed * Time.deltaTime);
             zombiesource.PlayOneShot(somzumbi);
 
-            // Virar o sprite na direção do movimento
+            // Virar o sprite na direï¿½ï¿½o do movimento
             if (direction.x != 0)
                 transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
 
@@ -70,7 +72,7 @@ public class ZombieController : MonoBehaviour
         }
         else
         {
-            // Parar de andar quando está no alcance de ataque
+            // Parar de andar quando estï¿½ no alcance de ataque
             anim.SetBool("isWalking", false);
 
             // Atacar quando o cooldown permitir
@@ -98,19 +100,19 @@ public class ZombieController : MonoBehaviour
     {
         if (playerController != null)
         {
-            // Verifica a distância novamente no momento do ataque
+            // Verifica a distï¿½ncia novamente no momento do ataque
             float distance = Vector2.Distance(transform.position, player.position);
             if (distance <= attackRange + 0.2f) // Pequena margem de erro
             {
                 playerController.TakeDamage(damage);
-                zombiesource.clip = somataquezumbi;
-                zombiesource.Play();
+               // zombiesource.clip = somataquezumbi;
+                //zombiesource.Play();
                 Debug.Log("Zumbi atacou o jogador! Dano: " + damage);
             }
         }
     }
 
-    // Método chamado pela animação (Animation Event)
+    // Mï¿½todo chamado pela animaï¿½ï¿½o (Animation Event)
     public void EnableAttack()
     {
         canAttack = true;
