@@ -10,6 +10,9 @@ public class HunterAudioManager : MonoBehaviour
     [SerializeField] float rate;
     [SerializeField] GameObject boss;
     [SerializeField] BossController controlador;
+
+    bool wasShooting;
+    bool wasSummoning;
     float time;
     void Start()
     {
@@ -35,13 +38,15 @@ public class HunterAudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (controlador.isShooting)
+        if (controlador.isShooting && !wasShooting)
         {
             Attack();
         }
-        if (controlador.isSummoning)
+        if (controlador.isSummoning && !wasSummoning)
         {
             Summon();
         }
+        wasShooting = controlador.isShooting;
+        wasSummoning = controlador.isSummoning;
     }
 }

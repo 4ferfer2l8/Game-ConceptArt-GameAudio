@@ -27,30 +27,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 520
---- !u!114 &-8674876738151911351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Low HP Percussion
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Low HP Percussion
-  StudioPath: parameter:/Low HP Percussion
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3032037113
-    data2: 470117792
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-5977014246725543771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +100,30 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 288480
+  Exists: 1
+--- !u!114 &-2977333433515624046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low HP Percussion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Low HP Percussion
+  StudioPath: parameter:/Low HP Percussion
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3032037113
+    data2: 470117792
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &-2210383971167247953
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   - {fileID: 4474048771435992101}
   - {fileID: 1602842310107526659}
   EditorParameters:
-  - {fileID: -8674876738151911351}
+  - {fileID: -2977333433515624046}
   MasterBanks:
   - {fileID: 4493810073422901628}
   StringsBanks:
@@ -492,6 +492,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &3655120899060860111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level/Low HP Percussion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Low HP Percussion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3032037113
+    data2: 470117792
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4053512836922338002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +732,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7729235221398603764}
+  - {fileID: 3655120899060860111}
   MinDistance: 1
   MaxDistance: 20
   Length: 12435
@@ -739,27 +763,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 22000
---- !u!114 &7729235221398603764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level/Low HP Percussion
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Low HP Percussion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3032037113
-    data2: 470117792
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1

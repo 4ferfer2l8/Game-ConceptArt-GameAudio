@@ -86,5 +86,6 @@ public class Arma : MonoBehaviour
         Quaternion rotBase = Quaternion.LookRotation(Vector3.forward, diferenca);
         float zCorrigido = rotBase.eulerAngles.z + 90f;
         Instantiate(Bala, canodaarma.transform.position, this.gameObject.transform.rotation);//Quaternion.Euler(0f, 0f, zCorrigido));
+        atirou = true;
     }
 }

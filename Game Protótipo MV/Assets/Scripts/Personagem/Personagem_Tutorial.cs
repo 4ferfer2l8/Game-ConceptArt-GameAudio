@@ -14,8 +14,9 @@ public class Personagem_Tutorial : MonoBehaviour
     bool inputdash;
     bool inputdireita;
     bool inputdireitaalt;
-    enum EstadoJogador { estado0, estado1,estado2,estado3,estado4 }
-    EstadoJogador estadoAtual = EstadoJogador.estado0;
+    public bool atirou;
+    public enum EstadoJogador { estado0, estado1,estado2,estado3,estado4 }
+    public EstadoJogador estadoAtual { get; private set; } = EstadoJogador.estado0;
     void Awake()
     {
         //determinando a variavel que será usada para:
@@ -99,9 +100,10 @@ public class Personagem_Tutorial : MonoBehaviour
         //transição de estado
         if (inputmouse)
         {
+
             Dialogo1.SetActive(false);
             estadoAtual = EstadoJogador.estado3;
-            
+            atirou = true;
         }
 
     }

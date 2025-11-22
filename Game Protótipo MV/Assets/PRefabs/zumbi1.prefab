@@ -183,13 +183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01274d4977f0794984d69724a4c4aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieController
-  speed: 10
+  speed: 13
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
   isAttacking: 0
   isWalking: 0
-  isDead: 0
 --- !u!95 &-7169740975884401505
 Animator:
   serializedVersion: 7

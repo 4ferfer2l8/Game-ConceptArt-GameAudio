@@ -44,7 +44,7 @@ public class Movimenta_Personagem : MonoBehaviour
     float moveverticalInput;
 
     //variaveis sistema de dano
-    float currentHealth;
+    public float currentHealth { get; private set; }
     bool isInvulnerable = false;
     float invulnerabilityTime = 1f; // tempo de invulnerabilidade em segundos
     [SerializeField] AudioClip[] machucadoclip;
@@ -168,16 +168,19 @@ public class Movimenta_Personagem : MonoBehaviour
         if (movimento.x != 0)
         {
             animator.Play("Dash_Lateral");
+            isDashing = true;
         }
         else
         {
             if (movimento.y < 0)
             {
                 animator.Play("Dash_Frente");
+                isDashing = true;
             }
             else if (movimento.y > 0)
             {
                 animator.Play("Dash_Costas");
+                isDashing = true;
             }
         }
 
@@ -190,11 +193,14 @@ public class Movimenta_Personagem : MonoBehaviour
             velocidadeatual = velocidadejogador;
             if (movimento.x != 0)
             {
+                isDashing = false;
                 estadoAtual = EstadoJogador.correndo;
             }
             else
             {
+                isDashing = false;
                 estadoAtual = EstadoJogador.idle;
+                
             }
         }
     }
