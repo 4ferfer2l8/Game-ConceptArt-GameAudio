@@ -17,8 +17,8 @@ public class Arma : MonoBehaviour
 
     //cooldown do tiro
 
-    [SerializeField] float cooldowntiro;
-    [SerializeField] float timertiro;
+    [SerializeField] public float cooldowntiro;
+    [SerializeField] public float timertiro;
     [SerializeField] bool podeatirar;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
