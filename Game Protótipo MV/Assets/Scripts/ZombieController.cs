@@ -61,7 +61,7 @@ public class ZombieController : MonoBehaviour
             // Movimento em dire��o ao jogador
             //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
             transform.position += (direction * speed * Time.deltaTime);
-            zombiesource.PlayOneShot(somzumbi);
+            //zombiesource.PlayOneShot(somzumbi);
 
             // Virar o sprite na dire��o do movimento
             if (direction.x != 0)

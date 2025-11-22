@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5749048327210010242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2898424196943279793}
+  - component: {fileID: 5887957755318364867}
+  - component: {fileID: 1743238462841508204}
+  - component: {fileID: 4067327921022365454}
+  - component: {fileID: 6656606720325833306}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2898424196943279793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749048327210010242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 622.574, y: 280.23337, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5887957755318364867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749048327210010242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2132182067
+      Data2: 1337496000
+      Data3: 335364759
+      Data4: -2079159824
+    Path: event:/OST/Level
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: Low HP Percussion
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1743238462841508204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749048327210010242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce28accd2e56fb4d801e7ab54b7a92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
+  FootsepEvent:
+    Guid:
+      Data1: 1736069571
+      Data2: 1141280015
+      Data3: -1945674587
+      Data4: -973214850
+    Path: event:/Player/Player_Walk
+  ShootEvent:
+    Guid:
+      Data1: -785177956
+      Data2: 1310536417
+      Data3: 613500054
+      Data4: 1419612891
+    Path: event:/Player/Player_Shoot
+  HitEvent:
+    Guid:
+      Data1: -1768873580
+      Data2: 1266817835
+      Data3: -2083927131
+      Data4: 1207511133
+    Path: event:/Player/Player_Hit
+  DashEvent:
+    Guid:
+      Data1: -1941554502
+      Data2: 1118139482
+      Data3: -1525191287
+      Data4: 1063397141
+    Path: event:/Player/Player_Dash
+  rate: 0.43
+  player: {fileID: 0}
+  controlador: {fileID: 0}
+  personagemTutorial: {fileID: 0}
+  controlaArma: {fileID: 0}
+--- !u!114 &4067327921022365454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749048327210010242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34eb3ae1bd614b746a25ce415b44b135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HunterAudioManager
+  FootsepEvent:
+    Guid:
+      Data1: -1896193519
+      Data2: 1268693617
+      Data3: -249941091
+      Data4: -1406970088
+    Path: event:/Hunter/Hunter_Walk
+  AttackEvent1:
+    Guid:
+      Data1: -1391248875
+      Data2: 1089574307
+      Data3: 1325523357
+      Data4: 671239101
+    Path: event:/Hunter/Hunter Shoot Normal
+  SummonEvent:
+    Guid:
+      Data1: 465049311
+      Data2: 1244893320
+      Data3: -1012857966
+      Data4: 1370867585
+    Path: event:/Hunter/Hunter Invoke
+  rate: 0
+  boss: {fileID: 0}
+  controlador: {fileID: 0}
+--- !u!114 &6656606720325833306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749048327210010242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54e4dba62eac4b45a4267ba74d15b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OSTAudioManager
+  controlador: {fileID: 0}
