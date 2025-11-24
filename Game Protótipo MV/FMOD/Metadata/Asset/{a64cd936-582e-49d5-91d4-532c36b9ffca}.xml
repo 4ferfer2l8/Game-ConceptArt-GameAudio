@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{a64cd936-582e-49d5-91d4-532c36b9ffca}">
+		<property name="assetPath">
+			<value>SFX_Hunter_Shoot_Guided/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{864ec19f-348f-47c1-990b-c4c58f33c2d4}</destination>
+		</relationship>
+	</object>
+</objects>

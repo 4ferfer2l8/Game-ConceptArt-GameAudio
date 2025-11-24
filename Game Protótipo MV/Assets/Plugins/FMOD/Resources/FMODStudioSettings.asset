@@ -463,8 +463,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Projeto MV.fspro
-  sourceBankPath: ../../../../Uneb/Projeto MV/FMOD/Projeto MV/Build
+  sourceProjectPath: FMOD/Projeto MV.fspro
+  sourceBankPath: FMOD/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
@@ -486,13 +486,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
-  Banks:
-  - AMBIENCE
-  - MUSIC
-  - SFXs
-  - VO
+  MasterBanks: []
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
