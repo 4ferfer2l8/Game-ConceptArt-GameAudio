@@ -40006,6 +40006,10 @@ PrefabInstance:
       value: -1341003703
       objectReference: {fileID: 0}
     - target: {fileID: 6656606720325833306, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: contador
+      value: 
+      objectReference: {fileID: 982157008}
+    - target: {fileID: 6656606720325833306, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
       propertyPath: controlador
       value: 
       objectReference: {fileID: 1803670981}
