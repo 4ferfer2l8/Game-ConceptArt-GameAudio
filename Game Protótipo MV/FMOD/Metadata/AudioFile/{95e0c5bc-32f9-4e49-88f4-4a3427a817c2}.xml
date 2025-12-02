@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{95e0c5bc-32f9-4e49-88f4-4a3427a817c2}">
+		<property name="assetPath">
+			<value>Hunter's Theme (INTRO).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.3076875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{864ec19f-348f-47c1-990b-c4c58f33c2d4}</destination>
+		</relationship>
+	</object>
+</objects>
