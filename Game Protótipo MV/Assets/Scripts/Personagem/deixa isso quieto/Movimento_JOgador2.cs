@@ -12,7 +12,7 @@ public class Movimento_JOgador2 : MonoBehaviour
     //audio sources
 
     //varivaveis movimento base
-    [Header("Movimentação Base")]
+    [Header("Movimentaï¿½ï¿½o Base")]
     [SerializeField] float velocidadejogador = 5f;
     Vector3 movimento = new Vector3();
     [SerializeField] AudioSource playersource;
@@ -42,20 +42,20 @@ public class Movimento_JOgador2 : MonoBehaviour
 
     void Awake()
     {
-        //determinando a variavel que será usada para:
-        //fazer as transições entre as animações
+        //determinando a variavel que serï¿½ usada para:
+        //fazer as transiï¿½ï¿½es entre as animaï¿½ï¿½es
         animator = GetComponent<Animator>();
-        //aplicar a física
+        //aplicar a fï¿½sica
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
 
         sprite = GetComponent<SpriteRenderer>();
 
         // debug se faltou algo na cena (ajuda a encontrar NRE cedo)
-        if (animator == null) Debug.LogWarning("Animator não encontrado em " + name);
-        if (rb == null) Debug.LogWarning("Rigidbody2D não encontrado em " + name);
-        if (sprite == null) Debug.LogWarning("SpriteRenderer não encontrado em " + name);
-        if (playersource == null) Debug.LogWarning("playersource não atribuído em " + name);
+        if (animator == null) Debug.LogWarning("Animator nï¿½o encontrado em " + name);
+        if (rb == null) Debug.LogWarning("Rigidbody2D nï¿½o encontrado em " + name);
+        if (sprite == null) Debug.LogWarning("SpriteRenderer nï¿½o encontrado em " + name);
+        //if (playersource == null) Debug.LogWarning("playersource nï¿½o atribuï¿½do em " + name);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,7 +80,7 @@ public class Movimento_JOgador2 : MonoBehaviour
     {
         movimento = new Vector3(movehorizontalInput, moveverticalInput, 0);
         movimento.Normalize();
-        // melhor usar rb.MovePosition para física, mas mantendo comportamento atual:
+        // melhor usar rb.MovePosition para fï¿½sica, mas mantendo comportamento atual:
         transform.position += movimento * velocidadeatual * Time.deltaTime;
 
         if (movimento.x > 0f)
@@ -105,7 +105,7 @@ public class Movimento_JOgador2 : MonoBehaviour
         //comportamento do estado
         animator.Play("Idle_Frente");
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
         if (movimento != Vector3.zero)
         {
             estadoAtual = EstadoJogador.correndo;
@@ -132,7 +132,7 @@ public class Movimento_JOgador2 : MonoBehaviour
             }
         }
 
-        //transições de estado
+        //transiï¿½ï¿½es de estado
         if (movimento == Vector3.zero)
         {
             estadoAtual = EstadoJogador.idle;
@@ -173,7 +173,7 @@ public class Movimento_JOgador2 : MonoBehaviour
 
         if (timer >= tempodash)
         {
-            //transição do estado
+            //transiï¿½ï¿½o do estado
             velocidadeatual = velocidadejogador;
             if (movimento.x != 0)
             {
@@ -207,7 +207,7 @@ public class Movimento_JOgador2 : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isInvulnerable) return; // ignora se está no cooldown
+        if (isInvulnerable) return; // ignora se estï¿½ no cooldown
 
         currentHealth -= amount;
         Debug.Log("Player tomou dano! Vida atual: " + currentHealth);

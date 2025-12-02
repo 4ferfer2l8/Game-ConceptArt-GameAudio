@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ContaZumbis : MonoBehaviour
 {
-    int contadorZumbis = 0;
+    public int contadorZumbis = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

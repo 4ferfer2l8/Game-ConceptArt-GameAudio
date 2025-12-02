@@ -78,6 +78,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6391593603293812102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game Intencity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Game Intencity
+  StudioPath: parameter:/Game Intencity
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4229254253
+    data2: 1580462551
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5977014246725543771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,10 +245,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639002317567283487
+  lastModified: 639002868690800957
   FileSizes:
   - Name: Desktop
-    Value: 2178
+    Value: 2276
   Exists: 1
 --- !u!114 &-3227322233204976802
 MonoBehaviour:
@@ -331,6 +355,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
+--- !u!114 &-2618096437332163956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST/Level Beta
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST/Level Beta
+  Guid:
+    Data1: 2132182067
+    Data2: 1337496000
+    Data3: 335364759
+    Data4: -2079159824
+  Banks:
+  - {fileID: 6871298062745684091}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 55316
 --- !u!114 &-2536871203386630260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,10 +447,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Parameter 2
+  m_Name: parameter:/GameState
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Parameter 2
-  StudioPath: parameter:/Parameter 2
+  Name: GameState
+  StudioPath: parameter:/GameState
   Min: 0
   Max: 1
   Default: 1
@@ -507,7 +558,6 @@ MonoBehaviour:
   - {fileID: 5911317758227867045}
   EditorEvents:
   - {fileID: -4935913091581400269}
-  - {fileID: 4655476905608729892}
   - {fileID: -3751954869141123388}
   - {fileID: 8411541909228289261}
   - {fileID: -2827533780908960186}
@@ -527,58 +577,63 @@ MonoBehaviour:
   - {fileID: 5026200569003032410}
   - {fileID: -1393484198685731544}
   - {fileID: 2888505000564225231}
+  - {fileID: -2618096437332163956}
+  - {fileID: 4462527921266336912}
   EditorParameters:
   - {fileID: 2230660931197148494}
   - {fileID: -1526891594083634391}
+  - {fileID: -6391593603293812102}
   MasterBanks:
   - {fileID: 7213938766367765191}
   StringsBanks:
   - {fileID: -3498190769434220802}
   cacheVersion: 131856
-  cacheTime: 639002317567283487
+  cacheTime: 639002868691516839
   SerializableEventsDict:
   - key: event:/Ambience/Ambience
     index: 0
-  - key: event:/OST/Level
-    index: 1
   - key: event:/OST/Menu
-    index: 2
+    index: 1
   - key: event:/Hunter/Hunter_Walk
-    index: 3
+    index: 2
   - key: event:/Hunter/Hunter Shoot Normal
-    index: 4
+    index: 3
   - key: event:/UI/Click In
-    index: 5
+    index: 4
   - key: event:/Zombie/Zombie_Walk
-    index: 6
+    index: 5
   - key: event:/Player/Player_Shoot
-    index: 7
+    index: 6
   - key: event:/Player/Player_Dash
-    index: 8
+    index: 7
   - key: event:/Player/Player_Walk
-    index: 9
+    index: 8
   - key: event:/UI/Click Out
-    index: 10
+    index: 9
   - key: event:/Zombie/Zombie_Spawn
-    index: 11
+    index: 10
   - key: event:/Hunter/Hunter Death
-    index: 12
+    index: 11
   - key: event:/Hunter/HunterSpawn
-    index: 13
+    index: 12
   - key: event:/Player/Player_Hit
-    index: 14
+    index: 13
   - key: event:/Zombie/Zombie_Attack
-    index: 15
+    index: 14
   - key: event:/Zombie/Zombie_Dying
-    index: 16
+    index: 15
   - key: event:/Hunter/Hunter Invoke
-    index: 17
+    index: 16
   - key: snapshot:/Pause
-    index: 18
+    index: 17
   - key: snapshot:/Pause Menu
-    index: 19
+    index: 18
   - key: event:/Game State/Game Pause
+    index: 19
+  - key: event:/OST/Level Beta
     index: 20
+  - key: event:/OST/Level Beta 2
+    index: 21
 --- !u!114 &243603678009933642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,9 +1159,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Game Pause/Parameter 2
+  m_Name: parameter:/Game Pause/GameState
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Parameter 2
+  Name: GameState
   StudioPath: 
   Min: 0
   Max: 1
@@ -1120,6 +1175,34 @@ MonoBehaviour:
   - Paused
   - Resumed
   Exists: 1
+--- !u!114 &4462527921266336912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/OST/Level Beta 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/OST/Level Beta 2
+  Guid:
+    Data1: 1051632018
+    Data2: 1335251678
+    Data3: 1540465074
+    Data4: -1341003703
+  Banks:
+  - {fileID: 6871298062745684091}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7761530802985423887}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 55038
 --- !u!114 &4474048771435992101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,33 +1297,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1950
   Exists: 1
---- !u!114 &4655476905608729892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/OST/Level
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/OST/Level
-  Guid:
-    Data1: -1432474654
-    Data2: 1328485160
-    Data3: -347181656
-    Data4: -1277390922
-  Banks:
-  - {fileID: 6871298062745684091}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 55058
 --- !u!114 &4806823966042995577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,10 +1437,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 639002312331934616
+  lastModified: 639002868691516839
   FileSizes:
   - Name: Desktop
-    Value: 1180032
+    Value: 1192832
   Exists: 1
 --- !u!114 &7043655902016228176
 MonoBehaviour:
@@ -1476,10 +1532,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639002317567263352
+  lastModified: 639002868690785918
   FileSizes:
   - Name: Desktop
-    Value: 5734
+    Value: 5890
   Exists: 1
 --- !u!114 &7501243555218069983
 MonoBehaviour:
@@ -1535,6 +1591,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 780
+--- !u!114 &7761530802985423887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level Beta 2/Game Intencity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Game Intencity
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4229254253
+    data2: 1580462551
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8411541909228289261
 MonoBehaviour:
   m_ObjectHideFlags: 0
