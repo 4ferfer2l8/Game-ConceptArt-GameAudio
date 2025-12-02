@@ -39969,6 +39969,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: Preload
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: TriggerOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: Params.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/OST/Level Beta 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: NonRigidbodyVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 1051632018
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1335251678
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1540465074
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887957755318364867, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1341003703
+      objectReference: {fileID: 0}
     - target: {fileID: 6656606720325833306, guid: 52b2b5da638c1df4592b752c67c4c61a, type: 3}
       propertyPath: controlador
       value: 
