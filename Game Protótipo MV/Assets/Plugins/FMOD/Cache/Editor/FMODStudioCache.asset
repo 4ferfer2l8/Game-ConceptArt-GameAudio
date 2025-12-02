@@ -54,30 +54,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 419
---- !u!114 &-7659025129357320705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level/Low HP Percussion
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Low HP Percussion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3032037113
-    data2: 470117792
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
 --- !u!114 &-6586640628831480749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,10 +221,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638979362811015266
+  lastModified: 639002317567283487
   FileSizes:
   - Name: Desktop
-    Value: 1950
+    Value: 2178
   Exists: 1
 --- !u!114 &-3227322233204976802
 MonoBehaviour:
@@ -410,6 +386,59 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 211
+--- !u!114 &-1526891594083634391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Parameter 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Parameter 2
+  StudioPath: parameter:/Parameter 2
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3192991803
+    data2: 2224165481
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Paused
+  - Resumed
+  Exists: 1
+--- !u!114 &-1393484198685731544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Pause Menu
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Pause Menu
+  Guid:
+    Data1: 762549265
+    Data2: 1161423978
+    Data3: -1857710403
+    Data4: 456100220
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-996835754885125098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,14 +524,18 @@ MonoBehaviour:
   - {fileID: 7643316445591486017}
   - {fileID: 1519109058349314584}
   - {fileID: 1866242412778120156}
+  - {fileID: 5026200569003032410}
+  - {fileID: -1393484198685731544}
+  - {fileID: 2888505000564225231}
   EditorParameters:
   - {fileID: 2230660931197148494}
+  - {fileID: -1526891594083634391}
   MasterBanks:
   - {fileID: 7213938766367765191}
   StringsBanks:
   - {fileID: -3498190769434220802}
   cacheVersion: 131856
-  cacheTime: 638979364646510163
+  cacheTime: 639002317567283487
   SerializableEventsDict:
   - key: event:/Ambience/Ambience
     index: 0
@@ -540,6 +573,12 @@ MonoBehaviour:
     index: 16
   - key: event:/Hunter/Hunter Invoke
     index: 17
+  - key: snapshot:/Pause
+    index: 18
+  - key: snapshot:/Pause Menu
+    index: 19
+  - key: event:/Game State/Game Pause
+    index: 20
 --- !u!114 &243603678009933642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,11 +855,39 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 638979335399923990
+  lastModified: 639002312333784172
   FileSizes:
   - Name: Desktop
     Value: 126912
   Exists: 1
+--- !u!114 &2888505000564225231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Game State/Game Pause
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Game State/Game Pause
+  Guid:
+    Data1: -831156516
+    Data2: 1208342692
+    Data3: -1503919188
+    Data4: -1115076352
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4134378674683284159}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3142111368831925321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1094,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3045
+--- !u!114 &4134378674683284159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game Pause/Parameter 2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Parameter 2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3192991803
+    data2: 2224165481
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Paused
+  - Resumed
+  Exists: 1
 --- !u!114 &4474048771435992101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,20 +1228,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/OST/Level
   Guid:
-    Data1: 2132182067
-    Data2: 1337496000
-    Data3: 335364759
-    Data4: -2079159824
+    Data1: -1432474654
+    Data2: 1328485160
+    Data3: -347181656
+    Data4: -1277390922
   Banks:
   - {fileID: 6871298062745684091}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: -7659025129357320705}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 12435
+  Length: 55058
 --- !u!114 &4806823966042995577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1268,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1800
+--- !u!114 &5026200569003032410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Pause
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Pause
+  Guid:
+    Data1: 1320010503
+    Data2: 1225542841
+    Data3: 851923365
+    Data4: -2140221510
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5093641792358533968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,10 +1381,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 638979364646510163
+  lastModified: 639002312331934616
   FileSizes:
   - Name: Desktop
-    Value: 553184
+    Value: 1180032
   Exists: 1
 --- !u!114 &7043655902016228176
 MonoBehaviour:
@@ -1357,10 +1476,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638979362810998701
+  lastModified: 639002317567263352
   FileSizes:
   - Name: Desktop
-    Value: 1856
+    Value: 5734
   Exists: 1
 --- !u!114 &7501243555218069983
 MonoBehaviour:
