@@ -64,6 +64,7 @@
 	<object class="GroupTrack" id="{aef3eca7-b9e0-4d81-8807-99e562ca03db}">
 		<relationship name="modules">
 			<destination>{df44dcb3-7371-4f11-a9d5-4d1d279e0466}</destination>
+			<destination>{5e5433b7-a9f0-4a3c-8f6e-296c5f8329c3}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{1858c757-f1af-4039-9923-cdeabef975d6}</destination>
@@ -77,6 +78,7 @@
 	<object class="ParameterProxy" id="{7ac25370-a889-4a92-8a83-6c36851ed85a}">
 		<relationship name="modules">
 			<destination>{df44dcb3-7371-4f11-a9d5-4d1d279e0466}</destination>
+			<destination>{5e5433b7-a9f0-4a3c-8f6e-296c5f8329c3}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{3d7556c7-7fff-48ea-8d88-a07548dda0c5}</destination>
@@ -102,6 +104,14 @@
 	<object class="SnapshotModule" id="{df44dcb3-7371-4f11-a9d5-4d1d279e0466}">
 		<relationship name="event">
 			<destination>{4eadc307-4cb9-490c-a551-c732bacf6e80}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotModule" id="{5e5433b7-a9f0-4a3c-8f6e-296c5f8329c3}">
+		<property name="start">
+			<value>1</value>
+		</property>
+		<relationship name="event">
+			<destination>{ae6a287f-6777-44c8-9246-f4b95c1bd192}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1858c757-f1af-4039-9923-cdeabef975d6}">

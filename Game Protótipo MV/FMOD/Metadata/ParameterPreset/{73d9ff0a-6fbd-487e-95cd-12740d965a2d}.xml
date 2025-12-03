@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="ParameterPreset" id="{73d9ff0a-6fbd-487e-95cd-12740d965a2d}">
 		<property name="name">
-			<value>Low HP Percussion</value>
+			<value>Low HP</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7a130328-3886-4325-afdf-a4190fb60961}</destination>
@@ -12,11 +12,21 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{d3b7a30e-2405-4015-a368-ed5cb16a2f19}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Low HP</value>
+			<value>Normal</value>
+		</property>
 		<property name="isGlobal">
 			<value>true</value>
 		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>

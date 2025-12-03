@@ -4,9 +4,10 @@ public class OSTAudioManager : MonoBehaviour
 {
     [SerializeField] Movimenta_Personagem controlador;
     [SerializeField] ContaZumbis contador;
+    [SerializeField] GameObject PauseMenu;
     void Start()
     {
-        
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("GameState", "Resumed");
     }
 
     // Update is called once per frame
@@ -14,22 +15,25 @@ public class OSTAudioManager : MonoBehaviour
     {
 
         // Low HP Filter
-        if (controlador.currentHealth <= 5f)
+        if (controlador.currentHealth <= 5f && PauseMenu.activeSelf == false)
         {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Low HP Percussion", 1f);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("Low HP", "Low HP");
         }
         else
         {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Low HP Percussion", 0f);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("Low HP", "Normal");
         }
 
-
+        if(contador == null)
+        {
+            return;
+        }
         // Game Intencity OST
         if (contador.contadorZumbis == 0)
         {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Game Intencity", 0f);
         }
-        else if (contador.contadorZumbis >= 3)
+        else if (contador.contadorZumbis >= 2)
         {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Game Intencity", 1f);
         }

@@ -54,6 +54,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 419
+--- !u!114 &-7193310511169558345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Game State/Low HP
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Game State/Low HP
+  Guid:
+    Data1: 488598829
+    Data2: 1129583662
+    Data3: 1102606261
+    Data4: 1064057128
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3809293973132315447}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6586640628831480749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +184,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2580
+--- !u!114 &-4981558384837420402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Low Health
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Low Health
+  Guid:
+    Data1: 1493659386
+    Data2: 1304708732
+    Data3: 1982755772
+    Data4: -989087509
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4935913091581400269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,10 +300,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639002868690800957
+  lastModified: 639003203998356465
   FileSizes:
   - Name: Desktop
-    Value: 2276
+    Value: 2406
   Exists: 1
 --- !u!114 &-3227322233204976802
 MonoBehaviour:
@@ -437,6 +492,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 211
+--- !u!114 &-2024110849833200922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/GamePlay
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/GamePlay
+  Guid:
+    Data1: -1368774529
+    Data2: 1153984375
+    Data3: -1175173486
+    Data4: -1831789732
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1526891594083634391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +661,9 @@ MonoBehaviour:
   - {fileID: 2888505000564225231}
   - {fileID: -2618096437332163956}
   - {fileID: 4462527921266336912}
+  - {fileID: -2024110849833200922}
+  - {fileID: -7193310511169558345}
+  - {fileID: -4981558384837420402}
   EditorParameters:
   - {fileID: 2230660931197148494}
   - {fileID: -1526891594083634391}
@@ -588,7 +673,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -3498190769434220802}
   cacheVersion: 131856
-  cacheTime: 639002923998239392
+  cacheTime: 639003203998356465
   SerializableEventsDict:
   - key: event:/Ambience/Ambience
     index: 0
@@ -634,6 +719,12 @@ MonoBehaviour:
     index: 20
   - key: event:/OST/Level Beta 2
     index: 21
+  - key: snapshot:/GamePlay
+    index: 22
+  - key: event:/Game State/Low HP
+    index: 23
+  - key: snapshot:/Low Health
+    index: 24
 --- !u!114 &243603678009933642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,19 +944,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Low HP Percussion
+  m_Name: parameter:/Low HP
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Low HP Percussion
-  StudioPath: parameter:/Low HP Percussion
+  Name: Low HP
+  StudioPath: parameter:/Low HP
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 3032037113
     data2: 470117792
-  Type: 0
+  Type: 2
   IsGlobal: 1
-  Labels: []
+  Labels:
+  - Low HP
+  - Normal
   Exists: 1
 --- !u!114 &2429262558280063563
 MonoBehaviour:
@@ -910,10 +1003,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/SFXs.bank
   Name: SFXs
   StudioPath: bank:/SFXs
-  lastModified: 639002312333784172
+  lastModified: 639003084822704562
   FileSizes:
   - Name: Desktop
-    Value: 126912
+    Value: 127392
   Exists: 1
 --- !u!114 &2888505000564225231
 MonoBehaviour:
@@ -1117,10 +1210,36 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/AMBIENCE.bank
   Name: AMBIENCE
   StudioPath: bank:/AMBIENCE
-  lastModified: 638979176698135883
+  lastModified: 639003084821814787
   FileSizes:
   - Name: Desktop
-    Value: 288480
+    Value: 289504
+  Exists: 1
+--- !u!114 &3809293973132315447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Low HP/Low HP
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Low HP
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3032037113
+    data2: 470117792
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Low HP
+  - Normal
   Exists: 1
 --- !u!114 &4053512836922338002
 MonoBehaviour:
@@ -1202,7 +1321,7 @@ MonoBehaviour:
   - {fileID: 7761530802985423887}
   MinDistance: 1
   MaxDistance: 20
-  Length: 55056
+  Length: 61794
 --- !u!114 &4474048771435992101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,10 +1536,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/VO.bank
   Name: VO
   StudioPath: bank:/VO
-  lastModified: 638979180767198377
+  lastModified: 639003084823877382
   FileSizes:
   - Name: Desktop
-    Value: 262016
+    Value: 262304
   Exists: 1
 --- !u!114 &6871298062745684091
 MonoBehaviour:
@@ -1437,10 +1556,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 639002923998239392
+  lastModified: 639003194625541586
   FileSizes:
   - Name: Desktop
-    Value: 1194432
+    Value: 1194080
   Exists: 1
 --- !u!114 &7043655902016228176
 MonoBehaviour:
@@ -1532,10 +1651,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639002868690785918
+  lastModified: 639003203998330491
   FileSizes:
   - Name: Desktop
-    Value: 5890
+    Value: 10942
   Exists: 1
 --- !u!114 &7501243555218069983
 MonoBehaviour:

@@ -44,6 +44,8 @@ public class PlayerAudioManager : MonoBehaviour
     }
     void Update()
     {
+        if (controlador == null) return;
+        
         player.TryGetComponent<Personagem_Tutorial>(out personagemTutorial);
         time += Time.deltaTime;
         if (controlador.estadoAtual == Movimenta_Personagem.EstadoJogador.correndo)

@@ -183,12 +183,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01274d4977f0794984d69724a4c4aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieController
-  speed: 13
+  speed: 5
   attackRange: 2
   attackCooldown: 1.2
   damage: 1
-  isAttacking: 0
   isWalking: 0
+  isAttacking: 0
+  zombiesource: {fileID: 0}
+  somzumbi: {fileID: 0}
+  somataquezumbi: {fileID: 0}
 --- !u!95 &7482953033131368489
 Animator:
   serializedVersion: 7

@@ -15,6 +15,7 @@ public class Menu_de_Pause : MonoBehaviour
        if(Input.GetKey(KeyCode.Escape))
        {
             Time.timeScale = 0;
+            menudepause.SetActive(true);
         }
     }
     

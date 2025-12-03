@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class Game_Over : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Game_Over : MonoBehaviour
         {
             telagameover.SetActive(true);
             Time.timeScale = 0f;
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("GameState", "Paused");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("Low HP", "Normal");
         }
     }
 
