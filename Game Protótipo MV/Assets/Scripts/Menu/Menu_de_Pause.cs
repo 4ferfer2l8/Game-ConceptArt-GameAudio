@@ -3,6 +3,8 @@ using UnityEngine;
 public class Menu_de_Pause : MonoBehaviour
 {
     [SerializeField] GameObject menudepause;
+    [SerializeField] GameObject opçoes;
+    [SerializeField] GameObject arma;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +17,15 @@ public class Menu_de_Pause : MonoBehaviour
        if(Input.GetKey(KeyCode.Escape))
        {
             Time.timeScale = 0;
-            menudepause.SetActive(true);
+            Pause();
+        }
+        if (opçoes.activeSelf == true || menudepause.activeSelf == true)
+        {
+            arma.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+        {
+            arma.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
     
@@ -23,5 +33,18 @@ public class Menu_de_Pause : MonoBehaviour
     {
         Time.timeScale = 1;
         menudepause.SetActive(false);
+    }
+    public void Pause()
+    {
+        menudepause.SetActive(true);
+        if (opçoes != null)
+        {
+            opçoes.SetActive(false);
+        }
+    }
+
+    public void Opçoes()
+    {
+        opçoes.SetActive(true);
     }
 }
