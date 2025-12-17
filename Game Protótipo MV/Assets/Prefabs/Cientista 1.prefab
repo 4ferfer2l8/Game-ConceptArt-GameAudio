@@ -138,6 +138,7 @@ MonoBehaviour:
   Bala: {fileID: 2953286959137477449, guid: 06b758597ab1d4f4a9cbed6ffde7058e, type: 3}
   canodaarma: {fileID: 525643536750470772}
   armasource: {fileID: 0}
+  shootDelay: 0.04
   atiraclip:
   - {fileID: 8300000, guid: 9943063fc7d79694bbf522322a1f1e0f, type: 3}
   - {fileID: 8300000, guid: 543dea085bace2442b776c1169be5ae4, type: 3}
@@ -145,6 +146,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a06385690857bc143a2fcbc3faa74bc9, type: 3}
   - {fileID: 8300000, guid: 2168a35597f8a0042a86d87e7829bd02, type: 3}
   - {fileID: 8300000, guid: 39ccb2244cbe0c9419973cb5849d0182, type: 3}
+  atirou: 0
   jogador: {fileID: 7613735433744852809}
   raio: 1.5
   cooldowntiro: 0.5
@@ -234,7 +236,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 8485781934879072732, guid: 4db53258308866c48b5997b0cd34d457, type: 3}
+  m_Sprite: {fileID: 9089602897068283911, guid: eeca56bf10c6bce4e9b87c32f4b14ad1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -280,14 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movimenta_Personagem
   velocidadejogador: 5
-  movimento: {x: 0, y: 0, z: 0}
-  playersource: {fileID: 0}
-  passosclip:
-  - {fileID: 8300000, guid: 45bcac394868cbb4eb030c0ca1f87ae6, type: 3}
-  - {fileID: 8300000, guid: 8cdc3376c5b60fb4faaebe12fa6faac8, type: 3}
-  - {fileID: 8300000, guid: 11d610f90818d074d8bfae0c7acbb1ca, type: 3}
-  - {fileID: 8300000, guid: 5df00ce7190c18d41a793bab38228be4, type: 3}
-  - {fileID: 8300000, guid: a6c5b45e42ee79443b4651a340c2c738, type: 3}
+  isDashing: 0
+  isHurt: 0
   velocidadedash: 8
   dashclip: {fileID: 8300000, guid: c082b3800ecf69a45a81afde7f61ffc8, type: 3}
   machucadoclip: []
@@ -329,7 +325,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.28}
+    oldSize: {x: 0.17, y: 0.28}
     newSize: {x: 0.16, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
