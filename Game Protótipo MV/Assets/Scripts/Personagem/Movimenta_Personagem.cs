@@ -49,6 +49,9 @@ public class Movimenta_Personagem : MonoBehaviour
     float invulnerabilityTime = 1f; // tempo de invulnerabilidade em segundos
     [SerializeField] AudioClip[] machucadoclip;
 
+    // HUD
+    [SerializeField] Animator DashCooldownHUD;
+
     void Awake()
     {
         //determinando a variavel que será usada para:
@@ -185,6 +188,8 @@ public class Movimenta_Personagem : MonoBehaviour
 
         velocidadeatual = velocidadedash;
         timer += Time.fixedDeltaTime;
+        
+        DashCooldownHUD.Play("Dash Cooldown");
 
         if (timer >= tempodash)
         {
@@ -194,12 +199,13 @@ public class Movimenta_Personagem : MonoBehaviour
             {
                 isDashing = false;
                 estadoAtual = EstadoJogador.correndo;
+                DashCooldownHUD.Play("Full");
             }
             else
             {
                 isDashing = false;
                 estadoAtual = EstadoJogador.idle;
-                
+                DashCooldownHUD.Play("Full");
             }
         }
     }

@@ -10,7 +10,7 @@ public class Funções_Menu : MonoBehaviour
     
     public void Jogar()
     {
-        SceneManager.LoadScene("FaseInicial");
+        SceneManager.LoadScene(1);
         StartCoroutine(ClickTimer());
     }
 

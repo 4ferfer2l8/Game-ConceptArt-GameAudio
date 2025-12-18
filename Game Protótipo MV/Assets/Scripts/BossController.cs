@@ -16,7 +16,7 @@ public class BossController : MonoBehaviour
     public float summonCooldown = 6f;
     public float arrowSpeed = 8f;
     public float arrowSpawnOffset = 0.8f;
-    public int maxHealth = 100;
+    public int maxHealth = 10;
     public int damage = 5;
 
     public int currentHealth;
@@ -29,7 +29,7 @@ public class BossController : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-        currentHealth = 100;
+        currentHealth = 10;
         attackTimer = attackCooldown;
         summonTimer = summonCooldown;
     }

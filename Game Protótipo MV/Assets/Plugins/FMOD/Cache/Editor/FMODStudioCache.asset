@@ -300,10 +300,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639003203998356465
+  lastModified: 639016193337960872
   FileSizes:
   - Name: Desktop
-    Value: 2406
+    Value: 2498
   Exists: 1
 --- !u!114 &-3227322233204976802
 MonoBehaviour:
@@ -492,6 +492,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 211
+--- !u!114 &-2066191558537175472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cutscene/Intro
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Cutscene/Intro
+  Guid:
+    Data1: 1296531575
+    Data2: 1318842610
+    Data3: 187679393
+    Data4: 1204852685
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22000
 --- !u!114 &-2024110849833200922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,6 +691,8 @@ MonoBehaviour:
   - {fileID: -2024110849833200922}
   - {fileID: -7193310511169558345}
   - {fileID: -4981558384837420402}
+  - {fileID: -2066191558537175472}
+  - {fileID: 1974341889468452743}
   EditorParameters:
   - {fileID: 2230660931197148494}
   - {fileID: -1526891594083634391}
@@ -673,7 +702,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -3498190769434220802}
   cacheVersion: 131856
-  cacheTime: 639003203998356465
+  cacheTime: 639016193337960872
   SerializableEventsDict:
   - key: event:/Ambience/Ambience
     index: 0
@@ -725,6 +754,10 @@ MonoBehaviour:
     index: 23
   - key: snapshot:/Low Health
     index: 24
+  - key: event:/Cutscene/Intro
+    index: 25
+  - key: event:/Cutscene/Outro
+    index: 26
 --- !u!114 &243603678009933642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +967,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1800
+--- !u!114 &1974341889468452743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cutscene/Outro
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Cutscene/Outro
+  Guid:
+    Data1: -1084625517
+    Data2: 1090104738
+    Data3: -731743848
+    Data4: -1018669340
+  Banks:
+  - {fileID: 7213938766367765191}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10579
 --- !u!114 &2230660931197148494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,10 +1711,10 @@ MonoBehaviour:
   Path: FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639003203998330491
+  lastModified: 639016193337930873
   FileSizes:
   - Name: Desktop
-    Value: 10942
+    Value: 418976
   Exists: 1
 --- !u!114 &7501243555218069983
 MonoBehaviour:

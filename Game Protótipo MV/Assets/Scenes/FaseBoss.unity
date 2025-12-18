@@ -460,9 +460,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1263252171}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -646,6 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112748431}
   - component: {fileID: 112748430}
+  - component: {fileID: 112748432}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -681,6 +682,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112748432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112748429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d83d2d3edcc70e4191234666a2df0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinCondition
+  boss: {fileID: 1287625896}
 --- !u!1 &149220086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Menu_de_Pause
   menudepause: {fileID: 1360096839}
+  HUD: {fileID: 1462300230}
   "op\xE7oes": {fileID: 1151378630}
   arma: {fileID: 1242365873}
 --- !u!1 &323207696
@@ -1533,7 +1548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5.0854, y: 0}
+  m_AnchoredPosition: {x: 5.0854187, y: 0}
   m_SizeDelta: {x: 20.1708, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362970180
@@ -37060,6 +37075,104 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &379693767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379693771}
+  - component: {fileID: 379693770}
+  - component: {fileID: 379693769}
+  - component: {fileID: 379693768}
+  m_Layer: 5
+  m_Name: Dash Cooldown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &379693768
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379693767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a747dfe89de023442a088cbc4d7c3a76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &379693769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379693767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -3725094219049293643, guid: 592c72f4741813a488ecb61514ca95c6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &379693770
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379693767}
+  m_CullTransparentMesh: 1
+--- !u!224 &379693771
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379693767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6467419, y: 0.6467419, z: 0.6467419}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1388916020}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -212.5315, y: -83.87875}
+  m_SizeDelta: {x: 100, y: 112.3575}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &383118453
 GameObject:
   m_ObjectHideFlags: 0
@@ -41020,6 +41133,7 @@ RectTransform:
   m_LocalScale: {x: 0.784825, y: 0.784825, z: 0.784825}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 379693771}
   - {fileID: 2111163174}
   m_Father: {fileID: 1462300231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42386,6 +42500,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 403574f2a6f04d84499a8e1a5f5cc589, type: 3}
   - {fileID: 8300000, guid: c1ed11c93556baa459b81b09ffda220e, type: 3}
   - {fileID: 8300000, guid: 7af1eed5eb64ab24db0625256adbd61f, type: 3}
+  DashCooldownHUD: {fileID: 379693768}
 --- !u!1 &1897843629
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Menu_de_Pause : MonoBehaviour
 {
     [SerializeField] GameObject menudepause;
+    [SerializeField] GameObject HUD;
     [SerializeField] GameObject opçoes;
     [SerializeField] GameObject arma;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,6 +35,7 @@ public class Menu_de_Pause : MonoBehaviour
     {
         Time.timeScale = 1;
         menudepause.SetActive(false);
+        HUD.SetActive(true);
     }
     public void Pause()
     {
@@ -46,5 +49,6 @@ public class Menu_de_Pause : MonoBehaviour
     public void Opçoes()
     {
         opçoes.SetActive(true);
+        HUD.SetActive(false);
     }
 }
