@@ -5,6 +5,7 @@ public class BossController : MonoBehaviour
 {
     public Transform player;
     public GameObject arrowPrefab;
+    private BossLifeUI bossLifeUI;
 
     [Header("Zumbis")]
     public GameObject[] zombiePrefabs;
@@ -18,23 +19,35 @@ public class BossController : MonoBehaviour
     public int maxHealth = 100;
     public int damage = 5;
 
-    private int currentHealth;
+    public int currentHealth;
     private float attackTimer;
     private float summonTimer;
     public bool isShooting { get; private set; } = false;
     public bool isSummoning { get; private set; } = false;
 
-    void Start()
+
+    void Awake()
     {
         anim = GetComponent<Animator>();
-        currentHealth = maxHealth;
+        currentHealth = 100;
         attackTimer = attackCooldown;
         summonTimer = summonCooldown;
-
-        if (player == null)
-            player = GameObject.FindWithTag("Player")?.transform;
     }
 
+    void Start()
+    {
+        
+        if (player == null)
+            player = GameObject.FindWithTag("Player")?.transform;
+
+        bossLifeUI = FindFirstObjectByType<BossLifeUI>();
+        if (bossLifeUI != null)
+        {
+            bossLifeUI.Setup(maxHealth);
+        }
+    }
+
+    
     void Update()
     {
         if (currentHealth <= 0) return;
@@ -152,6 +165,11 @@ public class BossController : MonoBehaviour
     void Die()
     {
         Debug.Log("Boss morreu!");
+
+        if(bossLifeUI != null)
+        {
+            bossLifeUI.Hide();
+        }
         Destroy(gameObject);
         // animação / drop / abrir caminho etc.
     }

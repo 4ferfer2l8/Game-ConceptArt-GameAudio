@@ -60,13 +60,12 @@ public class Movimenta_Personagem : MonoBehaviour
 
         sprite = GetComponent<SpriteRenderer>();
 
-       
+        currentHealth = 20;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         velocidadeatual = velocidadejogador;
-        currentHealth = 20;
     }
 
     // Update is called once per frame
